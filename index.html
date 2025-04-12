@@ -5,6 +5,26 @@
   <title>Photography MF - Light and Moments</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+   .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
     body {
       font-family: Calibri, sans-serif;
       margin: 0;
