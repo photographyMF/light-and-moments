@@ -11,6 +11,32 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f8f9fa;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #444;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
     }
     h2 {
       text-align: center;
@@ -33,42 +59,30 @@
     .gallery img:hover {
       transform: scale(1.05);
     }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Photography MF</h1>
-    <p>Photography is painting poetry with light, moments and feelings<br>Fotografia é pintar poesia com luz, momentos e sentimentos</p>
+    <h1>Portfólio de Fotografia</h1>
+    <p>Bem-vindo ao meu mundo visual. Explore a beleza através das minhas lentes.</p>
   </header>
 
-  <section>
-    <h2>📖 Sobre Mim</h2>
-    <p>
-      Há mais de 45 anos que olho o mundo com olhos de ver. A fotografia entrou na minha vida como um sussurro — um convite silencioso para eternizar o efémero.<br><br>
-      Sempre acreditei que fotografar é mais do que capturar uma imagem; é captar um sentimento, um instante que de outra forma desapareceria no tempo.  
-      A luz, essa matéria-prima dos sonhos, guia o meu olhar, e com ela pinto poesia feita de emoções, silêncios e detalhes.<br><br>
-      Ao longo destas décadas, fui desenhando o meu caminho com a câmara como extensão da alma. Cada disparo é um gesto de atenção, cada imagem, um reflexo do que toca o coração.<br><br>
-      A fotografia é o meu trabalho a tempo inteiro, o meu ofício e a minha paixão. E porque acredito que todos os momentos merecem ser celebrados, estou disponível para registar histórias em qualquer ponto do país.<br><br>
-      <strong>Serviços:</strong>
-      <ul>
-        <li>📸 Casamentos e baptizados</li>
-        <li>🎉 Festas particulares</li>
-        <li>👠 Sessões para modelos (ebook próprio)</li>
-        <li>🛒 Fotografia para e-commerce</li>
-      </ul>
-    </p>
-  </section>
+  <nav>
+    <a href="#galeria">Galeria</a>
+    <a href="https://contate.me/mariofernandes_mfphoto" target="_blank">Instagram</a>
+  </nav>
 
-  <section>
-    <h2>📷 Portefólio</h2>
-    <p>Em breve, uma seleção dos meus melhores trabalhos. Fica atento!</p>
-  </section>
-
-  <footer>
-    <p>Siga-me no Instagram: <a href="https://contate.me/mariofernandes_mfphoto" target="_blank">@mariofernandes_mfphoto</a></p>
-  </footer>
-  
   <section id="galeria">
     <h2>Galeria</h2>
     <div class="gallery">
@@ -96,9 +110,13 @@
       <a href="https://github.com/photographyMF/light-and-moments/blob/main/Gota%20de%20%C3%A1gua.jpg?raw=true" data-lightbox="galeria" data-title="Foto 10">
         <img src="https://github.com/photographyMF/light-and-moments/blob/main/Gota%20de%20%C3%A1gua.jpg?raw=true" alt="Foto 10">
       </a>
-      <!-- Continua a adicionar imagens neste formato -->
+      <!-- Adiciona mais imagens seguindo o mesmo formato -->
     </div>
   </section>
+
+  <footer>
+    <p>Siga-me no Instagram: <a href="https://contate.me/mariofernandes_mfphoto" target="_blank">@mariofernandes_mfphoto</a></p>
+  </footer>
 
   <!-- Lightbox2 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
