@@ -1,153 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt">
- <head>
+<head>
   <meta charset="UTF-8">
-  <title>Photography MF - Light and Moments</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio de Fotografia</title>
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
   <style>
-   .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  padding: 20px;
-}
-
-.gallery img {
-  max-width: 300px;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
     body {
-      font-family: Calibri, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
     }
-    header {
-      background: #666;
-      color: #fff;
-      padding: 2rem;
+    h2 {
       text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-style: italic;
-      margin-top: 0.5rem;
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    footer {
-      background: #f7c6d9;
-      color: #333;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #4dc0b5;
+      margin-top: 20px;
     }
     .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .gallery img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
   </style>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-
 </head>
 <body>
-
-  <header>
-    <h1>Photography MF</h1>
-    <p>Photography is painting poetry with light, moments and feelings<br>Fotografia é pintar poesia com luz, momentos e sentimentos</p>
-  </header>
-
-  <section>
-    <h2>📖 Sobre Mim</h2>
-    <p>
-      Há mais de 45 anos que olho o mundo com olhos de ver. A fotografia entrou na minha vida como um sussurro — um convite silencioso para eternizar o efémero.<br><br>
-      Sempre acreditei que fotografar é mais do que capturar uma imagem; é captar um sentimento, um instante que de outra forma desapareceria no tempo.  
-      A luz, essa matéria-prima dos sonhos, guia o meu olhar, e com ela pinto poesia feita de emoções, silêncios e detalhes.<br><br>
-      Ao longo destas décadas, fui desenhando o meu caminho com a câmara como extensão da alma. Cada disparo é um gesto de atenção, cada imagem, um reflexo do que toca o coração.<br><br>
-      A fotografia é o meu trabalho a tempo inteiro, o meu ofício e a minha paixão. E porque acredito que todos os momentos merecem ser celebrados, estou disponível para registar histórias em qualquer ponto do país.<br><br>
-      <strong>Serviços:</strong>
-      <ul>
-        <li>📸 Casamentos e baptizados</li>
-        <li>🎉 Festas particulares</li>
-        <li>👠 Sessões para modelos (ebook próprio)</li>
-        <li>🛒 Fotografia para e-commerce</li>
-      </ul>
-    </p>
+  <section id="galeria">
+    <h2>Galeria</h2>
+    <div class="gallery">
+      <a href="https://github.com/photographyMF/light-and-moments/blob/main/2Z3A2504_hdr.jpg?raw=true" data-lightbox="galeria" data-title="Foto 3">
+        <img src="https://github.com/photographyMF/light-and-moments/blob/main/2Z3A2504_hdr.jpg?raw=true" alt="Foto 3">
+      </a>
+      <a href="https://github.com/photographyMF/light-and-moments/blob/main/Castelo%20de%20Vide.jpg?raw=true" data-lightbox="galeria" data-title="Foto 4">
+        <img src="https://github.com/photographyMF/light-and-moments/blob/main/Castelo%20de%20Vide.jpg?raw=true" alt="Foto 4">
+      </a>
+      <a href="https://github.com/photographyMF/light-and-moments/blob/main/Cogumelos.jpg?raw=true" data-lightbox="galeria" data-title="Foto 5">
+        <img src="https://github.com/photographyMF/light-and-moments/blob/main/Cogumelos.jpg?raw=true" alt="Foto 5">
+      </a>
+      <a href="https://github.com/photographyMF/light-and-moments/blob/main/Cogumelos2.jpg?raw=true" data-lightbox="galeria" data-title="Foto 6">
+        <img src="https://github.com/photographyMF/light-and-moments/blob/main/Cogumelos2.jpg?raw=true" alt="Foto 6">
+      </a>
+      <a href="https://github.com/photographyMF/light-and-moments/blob/main/Cogumelos3.jpg?raw=true" data-lightbox="galeria" data-title="Foto 7">
+        <img src="https://github.com/photographyMF/light-and-moments/blob/main/Cogumelos3.jpg?raw=true" alt="Foto 7">
+      </a>
+      <a href="https://github.com/photographyMF/light-and-moments/blob/main/Cruz%20-%20Penha%20Garcia.jpg?raw=true" data-lightbox="galeria" data-title="Foto 8">
+        <img src="https://github.com/photographyMF/light-and-moments/blob/main/Cruz%20-%20Penha%20Garcia.jpg?raw=true" alt="Foto 8">
+      </a>
+      <a href="https://github.com/photographyMF/light-and-moments/blob/main/Flor%20de%20macieira.jpg?raw=true" data-lightbox="galeria" data-title="Foto 9">
+        <img src="https://github.com/photographyMF/light-and-moments/blob/main/Flor%20de%20macieira.jpg?raw=true" alt="Foto 9">
+      </a>
+      <a href="https://github.com/photographyMF/light-and-moments/blob/main/Gota%20de%20%C3%A1gua.jpg?raw=true" data-lightbox="galeria" data-title="Foto 10">
+        <img src="https://github.com/photographyMF/light-and-moments/blob/main/Gota%20de%20%C3%A1gua.jpg?raw=true" alt="Foto 10">
+      </a>
+      <!-- Continua a adicionar imagens neste formato -->
+    </div>
   </section>
 
-  <section>
-  <h2>📸 Galeria</h2>
-  <div class="gallery">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/2Z3A2202.jpg?raw=true" alt="Foto 1">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/2Z3A2475.jpg?raw=true" alt="Foto 2">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/2Z3A2504_hdr.jpg?raw=true" alt="Foto 3">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/Castelo%20de%20Vide.jpg?raw=true" alt="Foto 4">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/Cogumelos.jpg?raw=true" alt="Foto 5">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/Cogumelos2.jpg?raw=true" alt="Foto 6">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/Cogumelos3.jpg?raw=true" alt="Foto 7">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/Cogumelos4.jpg?raw=true" alt="Foto 8">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/Cruz%20-%20Penha%20Garcia.jpg?raw=true" alt="Foto 9">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/Flor%20de%20macieira.jpg?raw=true" alt="Foto 10">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/Gota%20de%20%C3%A1gua.jpg?raw=true" alt="Foto 12">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/IMGC0948.jpg?raw=true" alt="Foto 13">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/IMG_20220621_135203_888.jpg?raw=true" alt="Foto 14">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/IMG_20220703_225059_286.jpg?raw=true" alt="Foto 15">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/IMG_20230825_165021_810.jpg?raw=true" alt="Foto 16">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/IMG_8015.jpg?raw=true alt="Foto 17">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/IMG_8257.jpg?raw=true" alt="Foto 18">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/IMG_8379.jpg?raw=true" alt="Foto 19">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/IMG_8471.jpg?raw=true" alt="Foto 20">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/IMG_8861.jpg?raw=true" alt="Foto 21">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/IMG_9096_hdr.jpg?raw=true" alt="Foto 22">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/IMG_9184.jpg?raw=true" alt="Foto 23">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/Miradouro.jpg?raw=true" alt="Foto 24">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/P%C3%B4r%20do%20sol%20.%20Pateira%20de%20Fermentelos.jpg?raw=true" alt="Foto 25">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/Sobreiro%20PR5%20-%20Vouzela.jpg?raw=true" alt="Foto 26">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/Viseu%20-%20Serrra%20da%20Estrela.jpg?raw=true" alt="Foto 27">
-    <img src="https://github.com/photographyMF/light-and-moments/blob/7379f9df96cf27387fb99ccb9567a3e541b03b11/Viseu.jpg?raw=true" alt="Foto 28">
-      </div>
-</section>
-  <footer>
-    <p>Siga-me no Instagram: <a href="https://contate.me/mariofernandes_mfphoto" target="_blank">@mariofernandes_mfphoto</a></p>
-  </footer>
-
+  <!-- Lightbox2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
