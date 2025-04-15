@@ -14,21 +14,29 @@
       background-color: #f8f9fa;
     }
     header {
-      background-color: #333;
+      background-color: #222;
       color: #fff;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
     }
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+    }
     nav {
-      background-color: #444;
+      background-color: #333;
       text-align: center;
-      padding: 10px 0;
+      padding: 15px 0;
     }
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1em;
     }
     nav a:hover {
       text-decoration: underline;
@@ -40,41 +48,75 @@
     }
     h2 {
       text-align: center;
+      font-size: 2em;
       margin-top: 20px;
     }
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      padding: 20px;
-      background-color: #cccccc;
+      gap: 12px;
+      padding: 30px 20px;
+      background-color: #999;
     }
     .gallery img {
-      width: 200px;
+      width: 220px;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      transition: transform 0.2s;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
     }
     .gallery img:hover {
-      transform: scale(1.05);
+      transform: scale(1.08);
     }
     footer {
-      background-color: #dddddd;
+      background-color: #bbb;
       color: #000;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 20px;
+      font-size: 1em;
+      margin-top: 60px;
     }
     footer a {
       color: #000;
       text-decoration: underline;
     }
     #sobremim {
-      padding: 40px 20px;
+      padding: 50px 20px;
       background-color: #000;
       color: #fff;
+    }
+    #sobremim p {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.15em;
+      line-height: 1.6em;
+    }
+    .botaosite {
+      display: inline-block;
+      background-color: #fff;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 14px 24px;
+      margin: 30px auto 0;
+      border-radius: 8px;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+    .botaosite:hover {
+      background-color: #ccc;
+    }
+    @media (max-width: 768px) {
+      .gallery img {
+        width: 100%;
+        max-width: 90vw;
+      }
+      nav a {
+        display: inline-block;
+        margin: 10px;
+      }
     }
   </style>
 </head>
@@ -92,62 +134,20 @@
 
   <section id="sobremim">
     <h2>Sobre Mim</h2>
-    <p style="max-width: 800px; margin: auto; text-align: center; font-size: 1.1em;">
-      Olá! O meu nome é Mário Fernandes e sou um fotógrafo apaixonado por captar momentos únicos de luz e natureza.
+    <p>
+      Olá! O meu nome é Mário Fernandes e sou um fotógrafo amador apaixonado por captar momentos únicos de luz e natureza.
       Através da minha lente, procuro eternizar paisagens, atmosferas e emoções que me inspiram. Este portfólio é o reflexo
       da minha jornada visual — espero que o aprecies tanto quanto eu apreciei criá-lo. Obrigado por visitares!
     </p>
+    <div style="text-align: center;">
+      <a href="https://photographymf.github.io/light-and-moments/" class="botaosite" target="_blank">Ver Todas as Fotos</a>
+    </div>
   </section>
 
   <section id="galeria">
     <h2>Galeria</h2>
     <div class="gallery">
-      <!-- Bloco de imagens completo -->
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/IMG_20220621_135203_888.jpg?raw=true" data-lightbox="galeria" data-title="Foto 14">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/IMG_20220621_135203_888.jpg?raw=true" alt="Foto 14">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/IMG_20220703_225059_286.jpg?raw=true" data-lightbox="galeria" data-title="Foto 15">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/IMG_20220703_225059_286.jpg?raw=true" alt="Foto 15">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/IMG_20230825_165021_810.jpg?raw=true" data-lightbox="galeria" data-title="Foto 16">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/IMG_20230825_165021_810.jpg?raw=true" alt="Foto 16">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/IMG_8015.jpg?raw=true" data-lightbox="galeria" data-title="Foto 17">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/IMG_8015.jpg?raw=true" alt="Foto 17">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/IMG_8257.jpg?raw=true" data-lightbox="galeria" data-title="Foto 18">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/IMG_8257.jpg?raw=true" alt="Foto 18">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/IMG_8379.jpg?raw=true" data-lightbox="galeria" data-title="Foto 19">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/IMG_8379.jpg?raw=true" alt="Foto 19">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/IMG_8471.jpg?raw=true" data-lightbox="galeria" data-title="Foto 20">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/IMG_8471.jpg?raw=true" alt="Foto 20">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/IMG_8861.jpg?raw=true" data-lightbox="galeria" data-title="Foto 21">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/IMG_8861.jpg?raw=true" alt="Foto 21">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/IMG_9096_hdr.jpg?raw=true" data-lightbox="galeria" data-title="Foto 22">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/IMG_9096_hdr.jpg?raw=true" alt="Foto 22">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/IMG_9184.jpg?raw=true" data-lightbox="galeria" data-title="Foto 23">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/IMG_9184.jpg?raw=true" alt="Foto 23">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/Miradouro.jpg?raw=true" data-lightbox="galeria" data-title="Foto 24">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/Miradouro.jpg?raw=true" alt="Foto 24">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/P%C3%B4r%20do%20sol%20.%20Pateira%20de%20Fermentelos.jpg?raw=true" data-lightbox="galeria" data-title="Foto 25">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/P%C3%B4r%20do%20sol%20.%20Pateira%20de%20Fermentelos.jpg?raw=true" alt="Foto 25">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/Sobreiro%20PR5%20-%20Vouzela.jpg?raw=true" data-lightbox="galeria" data-title="Foto 26">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/Sobreiro%20PR5%20-%20Vouzela.jpg?raw=true" alt="Foto 26">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/Viseu%20-%20Serrra%20da%20Estrela.jpg?raw=true" data-lightbox="galeria" data-title="Foto 27">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/Viseu%20-%20Serrra%20da%20Estrela.jpg?raw=true" alt="Foto 27">
-      </a>
-      <a href="https://github.com/photographyMF/light-and-moments/blob/main/Viseu.jpg?raw=true" data-lightbox="galeria" data-title="Foto 28">
-        <img src="https://github.com/photographyMF/light-and-moments/blob/main/Viseu.jpg?raw=true" alt="Foto 28">
-      </a>
+      <!-- Galeria de imagens aqui -->
     </div>
   </section>
 
