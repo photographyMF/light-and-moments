@@ -10,8 +10,10 @@
   <meta property="og:image" content="https://photographymf.github.io/light-and-moments/imagens/1.jpg">
   <meta property="og:url" content="https://photographymf.github.io/light-and-moments/">
   <meta name="twitter:card" content="summary_large_image">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  <meta name="robots" content="index, follow">
+  <link rel="apple-touch-icon" href="favicon.ico">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
   <style>
     html {
       scroll-behavior: smooth;
@@ -76,145 +78,4 @@
       cursor: pointer;
     }
     .gallery img {
-      width: 220px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.2);
-      z-index: 10;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    }
-    footer {
-      background-color: #bbb;
-      color: #000;
-      text-align: center;
-      padding: 20px;
-      font-size: 1em;
-      margin-top: 60px;
-    }
-    footer a {
-      color: #000;
-      text-decoration: underline;
-    }
-    #sobremim {
-      padding: 50px 20px;
-      background-color: #000;
-      color: #fff;
-      animation: fadeIn 1s ease-in;
-    }
-    #sobremim p {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      font-size: 1.15em;
-      line-height: 1.6em;
-    }
-    .botaosite {
-      display: inline-block;
-      background-color: #fff;
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 14px 24px;
-      margin: 30px auto 0;
-      border-radius: 8px;
-      text-align: center;
-      transition: background-color 0.3s;
-    }
-    .botaosite:hover {
-      background-color: #ccc;
-    }
-    #topoBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #000;
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 50%;
-      font-size: 1.2em;
-      text-decoration: none;
-      display: none;
-      z-index: 1000;
-    }
-    #topoBtn:hover {
-      background-color: #444;
-    }
-    @media (max-width: 768px) {
-      .gallery img {
-        width: 100%;
-        max-width: 90vw;
-      }
-      nav a {
-        display: inline-block;
-        margin: 10px;
-      }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
-</head>
-<body id="topo">
-  <header>
-    <h1>Light & Moments</h1>
-    <p>Bem-vindo ao meu mundo visual. Explore a beleza através das minhas lentes.</p>
-  </header>
-
-  <nav>
-    <a href="#sobremim">Sobre Mim</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-
-  <section id="sobremim">
-    <h2>Sobre Mim</h2>
-    <p>
-      Olá! O meu nome é Mário Fernandes e sou um fotógrafo apaixonado por captar momentos únicos de luz e natureza.
-      Através da minha lente, procuro eternizar paisagens, atmosferas e emoções que me inspiram. Este portfólio é o reflexo
-      da minha jornada visual — espero que o aprecies tanto quanto eu apreciei criá-lo. Obrigado por visitares!
-    </p>
-  </section>
-
-  <section id="galeria">
-    <h2>Galeria</h2>
-    <div class="gallery">
-      <!-- Galeria com 34 imagens -->
-      <!-- Imagens de 1 a 34 -->
-      <!-- Gerado automaticamente -->
-      <!-- Início das imagens -->
-      <!-- prettier-ignore -->
-      " + Array.from({ length: 34 }, (_, i) => {
-        const n = i + 1;
-        return `<div class="thumb"><a href="imagens/${n}.jpg" data-lightbox="galeria"><img src="imagens/${n}.jpg" alt="Foto ${n}"></a></div>`;
-      }).join("\n      ") + "
-    </div>
-  </section>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p style="text-align: center; font-size: 1.1em;">
-      Pode contactar-me através do <a href="https://contate.me/mariofernandes_mfphoto" target="_blank">Instagram @mariofernandes_mfphoto</a>
-      ou visitar a minha <a href="https://photographymf.github.io/light-and-moments/" target="_blank">galeria completa</a>.
-    </p>
-  </section>
-
-  <footer>
-    <p>Siga-me no Instagram: <a href="https://contate.me/mariofernandes_mfphoto" target="_blank">@mariofernandes_mfphoto</a></p>
-  </footer>
-
-  <a href="#topo" id="topoBtn" title="Voltar ao topo">↑ Topo</a>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-  <script>
-    const topoBtn = document.getElementById("topoBtn");
-    window.onscroll = function() {
-      topoBtn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
-    };
-  </script>
-</body>
-</html>
+      widt
