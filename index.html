@@ -194,27 +194,17 @@
 
     <div class="categoria">
       <h3>Paisagens</h3>
-      <div class="gallery">
-        <!-- Inserção dinâmica de 1.jpg a 34.jpg -->
-        <!-- Suponhamos que imagens 1 a 17 são "Paisagens" -->
-        " + Array.from({length: 17}, (_, i) => `<a href="imagens/${i+1}.jpg" data-lightbox="paisagens"><img src="imagens/${i+1}.jpg" alt="Paisagem ${i+1}"></a>`).join('\n        ') + "
-      </div>
+      <div class="gallery" id="paisagens"></div>
     </div>
 
     <div class="categoria">
       <h3>Noite</h3>
-      <div class="gallery">
-        <!-- Imagens 18 a 26 -->
-        " + Array.from({length: 9}, (_, i) => `<a href="imagens/${i+18}.jpg" data-lightbox="noite"><img src="imagens/${i+18}.jpg" alt="Noite ${i+18}"></a>`).join('\n        ') + "
-      </div>
+      <div class="gallery" id="noite"></div>
     </div>
 
     <div class="categoria">
       <h3>Detalhes</h3>
-      <div class="gallery">
-        <!-- Imagens 27 a 34 -->
-        " + Array.from({length: 8}, (_, i) => `<a href="imagens/${i+27}.jpg" data-lightbox="detalhes"><img src="imagens/${i+27}.jpg" alt="Detalhe ${i+27}"></a>`).join('\n        ') + "
-      </div>
+      <div class="gallery" id="detalhes"></div>
     </div>
   </section>
 
@@ -238,6 +228,26 @@
     window.onscroll = function() {
       topoBtn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
     };
+
+    const gerarImagens = (inicio, fim, categoria, destinoId) => {
+      const container = document.getElementById(destinoId);
+      for (let i = inicio; i <= fim; i++) {
+        const link = document.createElement('a');
+        link.href = `imagens/${i}.jpg`;
+        link.setAttribute('data-lightbox', categoria);
+
+        const img = document.createElement('img');
+        img.src = `imagens/${i}.jpg`;
+        img.alt = `${categoria} ${i}`;
+
+        link.appendChild(img);
+        container.appendChild(link);
+      }
+    };
+
+    gerarImagens(1, 17, 'paisagens', 'paisagens');
+    gerarImagens(18, 26, 'noite', 'noite');
+    gerarImagens(27, 34, 'detalhes', 'detalhes');
   </script>
 </body>
 </html>
