@@ -7,7 +7,7 @@
   <meta name="description" content="Portfólio fotográfico de Mário Fernandes - captando momentos únicos de luz e natureza.">
   <meta property="og:title" content="Light & Moments | Mário Fernandes">
   <meta property="og:description" content="Portfólio de fotografia de natureza, luz e emoção por Mário Fernandes.">
-  <meta property="og:image" content="https://photographymf.github.io/light-and-moments/imagens/1.jpg">
+  <meta property="og:image" content="https://photographymf.github.io/light-and-moments/imagens/paisagens/1.jpg">
   <meta property="og:url" content="https://photographymf.github.io/light-and-moments/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="robots" content="index, follow">
@@ -229,15 +229,15 @@
       topoBtn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
     };
 
-    const gerarImagens = (inicio, fim, categoria, destinoId) => {
+    const gerarImagens = (inicio, fim, categoria, destinoId, pasta) => {
       const container = document.getElementById(destinoId);
       for (let i = inicio; i <= fim; i++) {
         const link = document.createElement('a');
-        link.href = `imagens/${i}.jpg`;
+        link.href = `imagens/${pasta}/${i}.jpg`;
         link.setAttribute('data-lightbox', categoria);
 
         const img = document.createElement('img');
-        img.src = `imagens/${i}.jpg`;
+        img.src = `imagens/${pasta}/${i}.jpg`;
         img.alt = `${categoria} ${i}`;
 
         link.appendChild(img);
@@ -245,9 +245,9 @@
       }
     };
 
-    gerarImagens(1, 17, 'paisagens', 'paisagens');
-    gerarImagens(18, 26, 'noite', 'noite');
-    gerarImagens(27, 34, 'detalhes', 'detalhes');
+    gerarImagens(1, 17, 'paisagens', 'paisagens', 'paisagens');
+    gerarImagens(18, 26, 'noite', 'noite', 'noite');
+    gerarImagens(27, 34, 'detalhes', 'detalhes', 'detalhes');
   </script>
 </body>
 </html>
