@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio de Fotografia</title>
+  <title>Light & Moments | Mário Fernandes</title>
+  <meta name="description" content="Portfólio fotográfico de Mário Fernandes - captando momentos únicos de luz e natureza.">
   <!-- Lightbox2 CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -20,6 +24,7 @@
       color: #fff;
       padding: 40px 20px;
       text-align: center;
+      animation: fadeIn 1s ease-in;
     }
     header h1 {
       font-size: 2.8em;
@@ -94,6 +99,7 @@
       padding: 50px 20px;
       background-color: #000;
       color: #fff;
+      animation: fadeIn 1s ease-in;
     }
     #sobremim p {
       max-width: 800px;
@@ -127,11 +133,15 @@
         margin: 10px;
       }
     }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Portfólio de Fotografia</h1>
+    <h1>Light & Moments</h1>
     <p>Bem-vindo ao meu mundo visual. Explore a beleza através das minhas lentes.</p>
   </header>
 
