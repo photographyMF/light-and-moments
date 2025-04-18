@@ -1,287 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Light & Moments | Mário Fernandes</title>
-  <meta name="description" content="Photography portfolio of Mário Fernandes - capturing unique moments of light and nature.">
-  <meta property="og:title" content="Light & Moments | Mário Fernandes">
-  <meta property="og:description" content="Portfolio of nature photography, light and emotion by Mário Fernandes.">
-  <meta property="og:image" content="https://photographymf.github.io/light-and-moments/imagens/paisagens/1.jpg">
-  <meta property="og:url" content="https://photographymf.github.io/light-and-moments/">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="robots" content="index, follow">
-  <link rel="apple-touch-icon" href="favicon.ico">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Playfair Display', serif;
-      margin: 0;
-      padding: 0;
-      background-color: #111;
-      color: #f1f1f1;
-    }
-    header {
-      background-color: #222;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-      animation: fadeIn 1s ease-in;
-    }
-    header h1 { font-size: 2.8em; margin-bottom: 10px; }
-    header p { font-size: 1.2em; }
-    nav {
-      background-color: #333;
-      text-align: center;
-      padding: 15px 0;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-    nav a:hover { text-decoration: underline; }
-    section {
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h2 { text-align: center; font-size: 2em; margin-top: 20px; color: #f1f1f1; }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      padding: 30px 20px;
-      background-color: #333;
-      animation: fadeIn 1s ease-in;
-    }
-    .gallery a { position: relative; }
-    .gallery img {
-      width: 220px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s ease-in;
-      opacity: 0;
-      animation: fadeInImage 0.8s forwards;
-    }
-    @keyframes fadeInImage {
-      to { opacity: 1; }
-    }
-    .gallery img:hover {
-      transform: scale(1.2);
-      z-index: 10;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    }
-    footer {
-      background-color: #1a1a1a;
-      color: #ccc;
-      text-align: center;
-      padding: 20px;
-      font-size: 1em;
-      margin-top: 60px;
-    }
-    footer a { color: #ccc; text-decoration: underline; }
-    #sobremim {
-      padding: 50px 20px;
-      background-color: #000;
-      color: #fff;
-      animation: fadeIn 1s ease-in;
-    }
-    #sobremim p {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      font-size: 1.15em;
-      line-height: 1.6em;
-    }
-    .botaosite {
-      display: inline-block;
-      background-color: #fff;
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 14px 24px;
-      margin: 30px auto 0;
-      border-radius: 8px;
-      text-align: center;
-      transition: background-color 0.3s;
-    }
-    .botaosite:hover { background-color: #ccc; }
-    #topoBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #555;
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 50%;
-      font-size: 1.2em;
-      text-decoration: none;
-      display: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      z-index: 1000;
-    }
-    #topoBtn:hover { background-color: #777; }
-    .categoria {
-      margin-top: 40px;
-    }
-    .categoria h3 {
-      text-align: center;
-      font-size: 1.6em;
-      margin-bottom: 20px;
-      color: #f1f1f1;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 500px;
-      margin: 0 auto;
-      gap: 15px;
-    }
-    form input, form textarea {
-      padding: 10px;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    form button {
-      padding: 10px;
-      font-size: 1em;
-      background-color: #333;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background-color: #000;
-    }
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      margin-top: 20px;
-    }
-    .lang-switch {
-      text-align: center;
-      margin: 20px;
-    }
-    .lang-switch select {
-      padding: 6px 12px;
-      font-size: 1em;
-      border-radius: 4px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Light and Moments - Fotografia</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script src="script.js" defer></script>
 </head>
-<body id="topo">
+<body>
   <header>
-    <h1>Light & Moments</h1>
-    <p>Welcome to my visual world. Explore beauty through my lens.</p>
-    <div class="language-switcher">
-  <label for="language">Linguagem:</label>
-  <select id="language" onchange="changeLanguage(this.value)">
-    <option value="index.html" selected>Português</option>
-    <option value="index-en.html">English</option>
-  </select>
-</div>
-
+    <h1>Light and Moments</h1>
+    <nav>
+      <ul>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="language-switcher">
+        <label for="language">Linguagem:</label>
+        <select id="language" onchange="changeLanguage(this.value)">
+          <option value="index.html" selected>Português</option>
+          <option value="index-en.html">English</option>
+        </select>
+      </div>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#sobremim">About</a>
-    <a href="#galeria">Gallery</a>
-    <a href="#contacto">Contact</a>
-  </nav>
+  <main>
+    <section id="galeria">
+      <h2>Galeria</h2>
+      <div class="categorias">
+        <button onclick="mostrarCategoria('paisagens')">Paisagens</button>
+        <button onclick="mostrarCategoria('macro')">Macro</button>
+        <button onclick="mostrarCategoria('detalhes')">Detalhes</button>
+      </div>
+      <div id="imagens" class="galeria"></div>
+    </section>
 
-  <section id="sobremim">
-    <h2>About Me</h2>
-    <p>
-      Hello! My name is Mário Fernandes and I'm a photographer passionate about capturing unique moments of light and nature.
-      Through my lens, I aim to eternalize landscapes, atmospheres and emotions that inspire me. This portfolio reflects
-      my visual journey — I hope you enjoy it as much as I enjoyed creating it. Thank you for visiting!
-    </p>
-  </section>
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>Sou um fotógrafo amador apaixonado por capturar a luz e os momentos mais marcantes da natureza e do quotidiano. Com base em Viseu, Portugal, dedico-me à fotografia de paisagem, macro e detalhes únicos que contam histórias visuais.</p>
+    </section>
 
-  <section id="galeria">
-    <h2>Gallery</h2>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form action="https://formspree.io/f/meqbdpgl" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
 
-    <div class="categoria">
-      <h3>Landscapes</h3>
-      <div class="gallery" id="paisagens"></div>
-    </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
 
-    <div class="categoria">
-      <h3>Macro</h3>
-      <div class="gallery" id="macro"></div>
-    </div>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
 
-    <div class="categoria">
-      <h3>Details</h3>
-      <div class="gallery" id="detalhes"></div>
-    </div>
-  </section>
-
-  <section id="contacto">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/mayvayly" method="POST">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
-      <textarea name="message" placeholder="Write your message" rows="5" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.8784193527786!2d-7.913000284592973!3d40.66101197933726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd233622406438bd%3A0x9a8e62b7a5d2036c!2sViseu!5e0!3m2!1spt-PT!2spt!4v1688818883945!5m2!1spt-PT!2spt"></iframe>
-  </section>
+        <button type="submit">Enviar</button>
+      </form>
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.563042415937!2d-7.913588!3d40.661011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2336073c0d6601%3A0x400ebbde49036c0!2sViseu!5e0!3m2!1spt-PT!2spt!4v1712700000000"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>Follow me on Instagram: <a href="https://www.instagram.com/mariofernandes_mfphoto" target="_blank">@mariofernandes_mfphoto</a></p>
-    <p>Website developed with pure HTML and CSS. Hosted for free via GitHub Pages.</p>
+    <p>&copy; 2025 Light and Moments - Todos os direitos reservados.</p>
   </footer>
 
-  <a href="#topo" id="topoBtn" title="Back to top">↑ Top</a>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
   <script>
-    const topoBtn = document.getElementById("topoBtn");
-    window.onscroll = function() {
-      topoBtn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
-    };
+    function changeLanguage(language) {
+      window.location.href = language;
+    }
 
-    const gerarImagens = (inicio, fim, categoria, destinoId, pasta) => {
-      const container = document.getElementById(destinoId);
-      for (let i = inicio; i <= fim; i++) {
-        const link = document.createElement('a');
-        link.href = `imagens/${pasta}/${i}.jpg`;
-        link.setAttribute('data-lightbox', categoria);
+    function mostrarCategoria(categoria) {
+      const imagensDiv = document.getElementById('imagens');
+      imagensDiv.innerHTML = '';
+      let total = 0;
+      let inicio = 1;
 
+      switch (categoria) {
+        case 'paisagens':
+          total = 14;
+          break;
+        case 'macro':
+          total = 10;
+          break;
+        case 'detalhes':
+          total = 11;
+          break;
+      }
+
+      for (let i = 1; i <= total; i++) {
         const img = document.createElement('img');
-        img.src = `imagens/${pasta}/${i}.jpg`;
+        img.src = `imagens/${categoria}/${i}.jpg`;
         img.alt = `${categoria} ${i}`;
-
-        link.appendChild(img);
-        container.appendChild(link);
+        img.onclick = () => abrirLightbox(img.src);
+        imagensDiv.appendChild(img);
       }
-    };
+    }
 
-    gerarImagens(1, 14, 'paisagens', 'paisagens', 'paisagens');
-    gerarImagens(15, 23, 'macro', 'macro', 'macro');
-    gerarImagens(24, 33, 'detalhes', 'detalhes', 'detalhes');
+    function abrirLightbox(src) {
+      const overlay = document.createElement('div');
+      overlay.classList.add('lightbox');
+      overlay.innerHTML = `
+        <div class="lightbox-content">
+          <img src="${src}" alt="Imagem em destaque">
+          <button onclick="fecharLightbox()">&times;</button>
+        </div>
+      `;
+      document.body.appendChild(overlay);
+    }
 
-    function switchLanguage(lang) {
-      if (lang === 'en') {
-        window.location.href = 'index-en.html';
-      } else {
-        window.location.href = 'index.html';
-      }
+    function fecharLightbox() {
+      const lightbox = document.querySelector('.lightbox');
+      if (lightbox) lightbox.remove();
     }
   </script>
 </body>
