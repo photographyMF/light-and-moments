@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photography portfolio of MF Photography. Gallery of landscapes, details, and night photography.">
+  <title>Light and Moments - MF Photography</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    header, footer {
+      background-color: #111;
+      padding: 1rem;
+      text-align: center;
+    }
+    h1, h2 {
+      color: #f0f0f0;
+    }
+    .language-switcher {
+      text-align: right;
+      padding: 0.5rem 1rem;
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 1rem;
+    }
+    .galeria img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+    .categoria {
+      margin-top: 2rem;
+    }
+    .voltar {
+      display: block;
+      margin: 1rem auto;
+      text-align: center;
+    }
+    .mapa {
+      text-align: center;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="language-switcher">
+    <label for="language">Language:</label>
+    <select id="language" onchange="changeLanguage(this.value)">
+      <option value="index.html">Português</option>
+      <option value="index-en.html" selected>English</option>
+    </select>
+  </div>
+
+  <header>
+    <h1>Light and Moments</h1>
+    <p>Photography portfolio by MF</p>
+  </header>
+
+  <main>
+    <section class="categoria">
+      <h2>Landscapes</h2>
+      <div class="galeria" id="galeria-paisagens"></div>
+    </section>
+
+    <section class="categoria">
+      <h2>Macro</h2>
+      <div class="galeria" id="galeria-macro"></div>
+    </section>
+
+    <section class="categoria">
+      <h2>Details</h2>
+      <div class="galeria" id="galeria-detalhes"></div>
+    </section>
+
+    <div class="mapa">
+      <h2>Location</h2>
+      <iframe src="https://www.google.com/maps?q=Viseu,Portugal&output=embed" width="100%" height="300" style="border:0;"></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MF Photography</p>
+  </footer>
+
+  <script>
+    function changeLanguage(language) {
+      window.location.href = language;
+    }
+
+    function gerarImagens(inicio, fim, categoria, idContainer) {
+      const container = document.getElementById(idContainer);
+      for (let i = inicio; i <= fim; i++) {
+        const img = document.createElement('img');
+        img.src = `imagens/${categoria}/${i}.jpg`;
+        img.alt = `${categoria} ${i}`;
+        img.onclick = () => abrirImagem(img.src);
+        container.appendChild(img);
+      }
+    }
+
+    function abrirImagem(src) {
+      const novaJanela = window.open('', '_blank');
+      novaJanela.document.write(`
+        <html><head><title>Image</title></head>
+        <body style="background-color: #000; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+          <img src="${src}" style="max-width: 90%; max-height: 90%;">
+          <div style="position: absolute; top: 20px; left: 20px;">
+            <button onclick="window.close()" style="padding: 10px; font-size: 16px;">Back to gallery</button>
+          </div>
+        </body></html>
+      `);
+    }
+
+    gerarImagens(1, 14, 'paisagens', 'galeria-paisagens');
+    gerarImagens(15, 24, 'macro', 'galeria-macro');
+    gerarImagens(25, 34, 'detalhes', 'galeria-detalhes');
+  </script>
+</body>
+
+</html>
 
