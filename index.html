@@ -1,122 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Light and Moments - Fotografia</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <header>
-    <h1>Light and Moments</h1>
-    <nav>
-      <ul>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#sobre">Sobre Mim</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <div class="language-switcher">
-        <label for="language">Linguagem:</label>
-        <select id="language" onchange="changeLanguage(this.value)">
-          <option value="index.html" selected>Português</option>
-          <option value="index-en.html">English</option>
-        </select>
-      </div>
-    </nav>
-  </header>
+<script>
+  const topoBtn = document.getElementById("topoBtn");
+  window.onscroll = function() {
+    topoBtn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
+  };
 
-  <main>
-    <section id="galeria">
-      <h2>Galeria</h2>
-      <div class="categorias">
-        <button onclick="mostrarCategoria('paisagens')">Paisagens</button>
-        <button onclick="mostrarCategoria('macro')">Macro</button>
-        <button onclick="mostrarCategoria('detalhes')">Detalhes</button>
-      </div>
-      <div id="imagens" class="galeria"></div>
-    </section>
+  const gerarImagens = (inicio, fim, categoria, destinoId, pasta) => {
+    const container = document.getElementById(destinoId);
+    for (let i = inicio; i <= fim; i++) {
+      const link = document.createElement('a');
+      link.href = `imagens/${pasta}/${i}.jpg`;
+      link.setAttribute('data-lightbox', categoria);
 
-    <section id="sobre">
-      <h2>Sobre Mim</h2>
-      <p>Sou um fotógrafo amador apaixonado por capturar a luz e os momentos mais marcantes da natureza e do quotidiano. Com base em Viseu, Portugal, dedico-me à fotografia de paisagem, macro e detalhes únicos que contam histórias visuais.</p>
-    </section>
+      const img = document.createElement('img');
+      img.src = `imagens/${pasta}/${i}.jpg`;
+      img.alt = `${categoria} ${i}`;
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <form action="https://formspree.io/f/meqbdpgl" method="POST">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" required></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
-      <div class="mapa">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.563042415937!2d-7.913588!3d40.661011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2336073c0d6601%3A0x400ebbde49036c0!2sViseu!5e0!3m2!1spt-PT!2spt!4v1712700000000"
-          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Light and Moments - Todos os direitos reservados.</p>
-  </footer>
-
-  <script>
-    function changeLanguage(language) {
-      window.location.href = language;
+      link.appendChild(img);
+      container.appendChild(link);
     }
+  };
 
-    function mostrarCategoria(categoria) {
-      const imagensDiv = document.getElementById('imagens');
-      imagensDiv.innerHTML = '';
-      let total = 0;
-      let inicio = 1;
-
-      switch (categoria) {
-        case 'paisagens':
-          total = 14;
-          break;
-        case 'macro':
-          total = 10;
-          break;
-        case 'detalhes':
-          total = 11;
-          break;
-      }
-
-      for (let i = 1; i <= total; i++) {
-        const img = document.createElement('img');
-        img.src = `imagens/${categoria}/${i}.jpg`;
-        img.alt = `${categoria} ${i}`;
-        img.onclick = () => abrirLightbox(img.src);
-        imagensDiv.appendChild(img);
-      }
-    }
-
-    function abrirLightbox(src) {
-      const overlay = document.createElement('div');
-      overlay.classList.add('lightbox');
-      overlay.innerHTML = `
-        <div class="lightbox-content">
-          <img src="${src}" alt="Imagem em destaque">
-          <button onclick="fecharLightbox()">&times;</button>
-        </div>
-      `;
-      document.body.appendChild(overlay);
-    }
-
-    function fecharLightbox() {
-      const lightbox = document.querySelector('.lightbox');
-      if (lightbox) lightbox.remove();
-    }
-  </script>
-</body>
-</html>
+  gerarImagens(1, 14, 'paisagens', 'paisagens', 'paisagens');
+  gerarImagens(15, 23, 'macro', 'macro', 'macro');
+  gerarImagens(24, 33, 'detalhes', 'detalhes', 'detalhes');
+</script>
