@@ -16,9 +16,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Playfair Display', serif;
       margin: 0;
@@ -32,13 +30,8 @@
       text-align: center;
       animation: fadeIn 1s ease-in;
     }
-    header h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2em;
-    }
+    header h1 { font-size: 2.8em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; }
     nav {
       background-color: #333;
       text-align: center;
@@ -51,19 +44,13 @@
       font-weight: bold;
       font-size: 1.1em;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a:hover { text-decoration: underline; }
     section {
       padding: 20px;
       max-width: 1200px;
       margin: auto;
     }
-    h2 {
-      text-align: center;
-      font-size: 2em;
-      margin-top: 20px;
-    }
+    h2 { text-align: center; font-size: 2em; margin-top: 20px; }
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -73,15 +60,18 @@
       background-color: #999;
       animation: fadeIn 1s ease-in;
     }
-    .gallery a {
-      position: relative;
-    }
+    .gallery a { position: relative; }
     .gallery img {
       width: 220px;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s ease-in;
+      opacity: 0;
+      animation: fadeInImage 0.8s forwards;
+    }
+    @keyframes fadeInImage {
+      to { opacity: 1; }
     }
     .gallery img:hover {
       transform: scale(1.2);
@@ -96,10 +86,7 @@
       font-size: 1em;
       margin-top: 60px;
     }
-    footer a {
-      color: #000;
-      text-decoration: underline;
-    }
+    footer a { color: #000; text-decoration: underline; }
     #sobremim {
       padding: 50px 20px;
       background-color: #000;
@@ -125,9 +112,7 @@
       text-align: center;
       transition: background-color 0.3s;
     }
-    .botaosite:hover {
-      background-color: #ccc;
-    }
+    .botaosite:hover { background-color: #ccc; }
     #topoBtn {
       position: fixed;
       bottom: 30px;
@@ -142,9 +127,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
       z-index: 1000;
     }
-    #topoBtn:hover {
-      background-color: #777;
-    }
+    #topoBtn:hover { background-color: #777; }
     .categoria {
       margin-top: 40px;
     }
@@ -153,19 +136,36 @@
       font-size: 1.6em;
       margin-bottom: 20px;
     }
-    @media (max-width: 768px) {
-      .gallery img {
-        width: 100%;
-        max-width: 90vw;
-      }
-      nav a {
-        display: inline-block;
-        margin: 10px;
-      }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: 0 auto;
+      gap: 15px;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    form input, form textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      padding: 10px;
+      font-size: 1em;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #000;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -211,15 +211,18 @@
 
   <section id="contacto">
     <h2>Contacto</h2>
-    <p style="text-align: center; font-size: 1.1em;">
-      Pode contactar-me através do <a href="https://contate.me/mariofernandes_mfphoto" target="_blank">Instagram @mariofernandes_mfphoto</a>
-      ou visitar a minha <a href="https://photographymf.github.io/light-and-moments/" target="_blank">galeria completa</a>.<br><br>
-      Também pode enviar-me um email para: <a href="mailto:mfphotography.pt@gmail.com">mfphotography.pt@gmail.com</a>
-    </p>
+    <form action="https://formspree.io/f/mayvayly" method="POST">
+      <input type="text" name="name" placeholder="O seu nome" required>
+      <input type="email" name="email" placeholder="O seu email" required>
+      <textarea name="message" placeholder="Escreva a sua mensagem" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.4843067010554!2d-8.6110009!3d41.1496104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2464e187d8dbfb%3A0x9c174ed13a53e1d6!2sPorto!5e0!3m2!1spt-PT!2spt!4v1688818883945!5m2!1spt-PT!2spt"></iframe>
   </section>
 
   <footer>
     <p>Siga-me no Instagram: <a href="https://contate.me/mariofernandes_mfphoto" target="_blank">@mariofernandes_mfphoto</a></p>
+    <p>Site desenvolvido com HTML e CSS puros. Hospedado gratuitamente via GitHub Pages.</p>
   </footer>
 
   <a href="#topo" id="topoBtn" title="Voltar ao topo">↑ Topo</a>
@@ -248,8 +251,8 @@
     };
 
     gerarImagens(1, 14, 'paisagens', 'paisagens', 'paisagens');
-    gerarImagens(15, 23, 'macro', 'macro', 'macro');
-    gerarImagens(24, 33, 'detalhes', 'detalhes', 'detalhes');
+    gerarImagens(15, 24, 'macro', 'macro', 'macro');
+    gerarImagens(25, 34, 'detalhes', 'detalhes', 'detalhes');
   </script>
 </body>
 </html>
