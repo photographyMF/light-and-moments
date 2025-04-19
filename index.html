@@ -1,145 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portefólio fotográfico de MF Photography. Galeria de imagens de paisagens, detalhes e fotografia noturna.">
-  <title>Light and Moments - MF Photography</title>
-  <link rel="stylesheet" href="estilo.css">
-  <style>
-    body {
-      background-color: #1a1a1a;
-      color: #f0f0f0;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-    }
-    header, footer {
-      background-color: #111;
-      padding: 1rem;
-      text-align: center;
-    }
-    h1, h2 {
-      color: #f0f0f0;
-    }
-    .language-switcher {
-      text-align: right;
-      padding: 0.5rem 1rem;
-    }
-    .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      padding: 1rem;
-    }
-    .galeria img {
-      width: 200px;
-      height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-    .galeria img:hover {
-      transform: scale(1.05);
-    }
-    .categoria {
-      margin-top: 2rem;
-    }
-    .voltar {
-      display: block;
-      margin: 1rem auto;
-      text-align: center;
-    }
-    .mapa {
-      text-align: center;
-      margin-top: 3rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light and Moments - MF Photography</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="color-scheme.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-  <div class="language-switcher">
-    <label for="language">Linguagem:</label>
-    <select id="language" onchange="changeLanguage(this.value)">
-      <option value="index.html" selected>Português</option>
-      <option value="index-en.html">English</option>
-    </select>
-  </div>
+    <header>
+        <div class="language-selector">
+            <label for="language-select">Idioma / Language:</label>
+            <select id="language-select" onchange="changeLanguage()">
+                <option value="pt" selected>Português</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <div class="header-content">
+            <h1 class="site-title" data-pt="Light and Moments" data-en="Light and Moments">Light and Moments</h1>
+            <p class="site-subtitle" data-pt="Portefólio de fotografia por MF" data-en="Photography portfolio by MF">Portefólio de fotografia por MF</p>
+        </div>
+    </header>
 
-  <header>
-    <h1>Light and Moments</h1>
-    <p>Portefólio de fotografia por MF</p>
-  </header>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#about" class="nav-link" data-pt="Sobre Mim" data-en="About Me">Sobre Mim</a></li>
+            <li><a href="#landscapes" class="nav-link" data-pt="Paisagens" data-en="Landscapes">Paisagens</a></li>
+            <li><a href="#macro" class="nav-link" data-pt="Macro" data-en="Macro">Macro</a></li>
+            <li><a href="#details" class="nav-link" data-pt="Detalhes" data-en="Details">Detalhes</a></li>
+            <li><a href="#location" class="nav-link" data-pt="Localização" data-en="Location">Localização</a></li>
+        </ul>
+    </nav>
 
-  <section class="sobre-mim" style="padding: 2rem; max-width: 800px; margin: auto;">
-    <h2>Sobre Mim</h2>
-    <p>
-      Sou um fotógrafo amador apaixonado pela beleza da natureza, dos pequenos detalhes e dos contrastes noturnos. Através da lente da minha câmara, procuro capturar momentos únicos que transmitam emoção, luz e autenticidade.
-    </p>
-  </section>
+    <main>
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2 data-pt="Sobre Mim" data-en="About Me">Sobre Mim</h2>
+            </div>
+            <div class="section-content">
+                <p data-pt="Sou um fotógrafo amador apaixonado pela beleza da natureza, dos pequenos detalhes e dos contrastes noturnos. Através da lente da minha câmara, procuro capturar momentos únicos que transmitam emoção, luz e autenticidade." 
+                   data-en="I am an amateur photographer passionate about the beauty of nature, small details, and night contrasts. Through my camera lens, I seek to capture unique moments that convey emotion, light, and authenticity.">
+                    Sou um fotógrafo amador apaixonado pela beleza da natureza, dos pequenos detalhes e dos contrastes noturnos. Através da lente da minha câmara, procuro capturar momentos únicos que transmitam emoção, luz e autenticidade.
+                </p>
+            </div>
+        </section>
 
-  <main>
-    <section class="categoria">
-      <h2>Paisagens</h2>
-      <div class="galeria" id="galeria-paisagens"></div>
-    </section>
+        <section id="landscapes" class="section">
+            <div class="section-header">
+                <h2 data-pt="Paisagens" data-en="Landscapes">Paisagens</h2>
+            </div>
+            <div class="gallery" id="landscapes-gallery">
+                <!-- As imagens serão carregadas via JavaScript -->
+            </div>
+        </section>
 
-    <section class="categoria">
-      <h2>Macro</h2>
-      <div class="galeria" id="galeria-macro"></div>
-    </section>
+        <section id="macro" class="section">
+            <div class="section-header">
+                <h2 data-pt="Macro" data-en="Macro">Macro</h2>
+            </div>
+            <div class="gallery" id="macro-gallery">
+                <!-- As imagens serão carregadas via JavaScript -->
+            </div>
+        </section>
 
-    <section class="categoria">
-      <h2>Detalhes</h2>
-      <div class="galeria" id="galeria-detalhes"></div>
-    </section>
+        <section id="details" class="section">
+            <div class="section-header">
+                <h2 data-pt="Detalhes" data-en="Details">Detalhes</h2>
+            </div>
+            <div class="gallery" id="details-gallery">
+                <!-- As imagens serão carregadas via JavaScript -->
+            </div>
+        </section>
 
-    <div class="mapa">
-      <h2>Localização</h2>
-      <iframe src="https://www.google.com/maps?q=Viseu,Portugal&output=embed" width="100%" height="300" style="border:0;"></iframe>
-    </div>
-  </main>
+        <section id="location" class="section">
+            <div class="section-header">
+                <h2 data-pt="Localização" data-en="Location">Localização</h2>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96283.06404172393!2d-7.9699397!3d40.6574713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23359c61126d07%3A0x400ebbde49036d0!2sViseu!5e0!3m2!1spt-PT!2spt!4v1650000000000!5m2!1spt-PT!2spt" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="location-info">
+                    <h3 data-pt="Viseu District" data-en="Viseu District">Viseu District</h3>
+                    <p data-pt="Portugal" data-en="Portugal">Portugal</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 MF Photography</p>
-  </footer>
-
-  <script>
-    function changeLanguage(language) {
-      window.location.href = language;
-    }
-
-    function gerarImagens(inicio, fim, categoria, idContainer) {
-      const container = document.getElementById(idContainer);
-      for (let i = inicio; i <= fim; i++) {
-        const img = document.createElement('img');
-        img.src = `imagens/${categoria}/${i}.jpg`;
-        img.alt = `${categoria} ${i}`;
-        img.onclick = () => abrirImagem(img.src);
-        container.appendChild(img);
-      }
-    }
-
-    function abrirImagem(src) {
-      const novaJanela = window.open('', '_blank');
-      novaJanela.document.write(`
-        <html><head><title>Imagem</title></head>
-        <body style="background-color: #000; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
-          <img src="${src}" style="max-width: 90%; max-height: 90%;">
-          <div style="position: absolute; top: 20px; left: 20px;">
-            <button onclick="window.close()" style="padding: 10px; font-size: 16px;">Voltar à galeria</button>
-          </div>
-        </body></html>
-      `);
-    }
-
-    gerarImagens(1, 14, 'paisagens', 'galeria-paisagens');
-    gerarImagens(15, 23, 'macro', 'galeria-macro');
-    gerarImagens(24, 33, 'detalhes', 'galeria-detalhes');
-  </script>
+    <footer>
+        <p data-pt="© 2025 MF Photography" data-en="© 2025 MF Photography">© 2025 MF Photography</p>
+    </footer>
 </body>
-
 </html>
