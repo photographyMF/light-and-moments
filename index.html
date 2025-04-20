@@ -1,102 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light and Moments - MF Photography</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="color-scheme.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light and Moments</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div class="language-selector">
-            <label for="language-select">Idioma / Language:</label>
-            <select id="language-select" onchange="changeLanguage()">
-                <option value="pt" selected>Português</option>
-                <option value="en">English</option>
-            </select>
-        </div>
-        <div class="header-content">
-            <h1 class="site-title" data-pt="Light and Moments" data-en="Light and Moments">Light and Moments</h1>
-            <p class="site-subtitle" data-pt="Portefólio de fotografia por MF" data-en="Photography portfolio by MF">Portefólio de fotografia por MF</p>
-        </div>
+      <h1>Light and Moments</h1>
     </header>
-
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#about" class="nav-link" data-pt="Sobre Mim" data-en="About Me">Sobre Mim</a></li>
-            <li><a href="#landscapes" class="nav-link" data-pt="Paisagens" data-en="Landscapes">Paisagens</a></li>
-            <li><a href="#macro" class="nav-link" data-pt="Macro" data-en="Macro">Macro</a></li>
-            <li><a href="#details" class="nav-link" data-pt="Detalhes" data-en="Details">Detalhes</a></li>
-            <li><a href="#location" class="nav-link" data-pt="Localização" data-en="Location">Localização</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section id="about" class="section">
-            <div class="section-header">
-                <h2 data-pt="Sobre Mim" data-en="About Me">Sobre Mim</h2>
-            </div>
-            <div class="section-content">
-                <p data-pt="Sou um fotógrafo amador apaixonado pela beleza da natureza, dos pequenos detalhes e dos contrastes noturnos. Através da lente da minha câmara, procuro capturar momentos únicos que transmitam emoção, luz e autenticidade." 
-                   data-en="I am an amateur photographer passionate about the beauty of nature, small details, and night contrasts. Through my camera lens, I seek to capture unique moments that convey emotion, light, and authenticity.">
-                    Sou um fotógrafo amador apaixonado pela beleza da natureza, dos pequenos detalhes e dos contrastes noturnos. Através da lente da minha câmara, procuro capturar momentos únicos que transmitam emoção, luz e autenticidade.
-                </p>
-            </div>
-        </section>
-
-        <section id="landscapes" class="section">
-            <div class="section-header">
-                <h2 data-pt="Paisagens" data-en="Landscapes">Paisagens</h2>
-            </div>
-            <div class="gallery" id="landscapes-gallery">
-                <!-- As imagens serão carregadas via JavaScript -->
-            </div>
-        </section>
-
-        <section id="macro" class="section">
-            <div class="section-header">
-                <h2 data-pt="Macro" data-en="Macro">Macro</h2>
-            </div>
-            <div class="gallery" id="macro-gallery">
-                <!-- As imagens serão carregadas via JavaScript -->
-            </div>
-        </section>
-
-        <section id="details" class="section">
-            <div class="section-header">
-                <h2 data-pt="Detalhes" data-en="Details">Detalhes</h2>
-            </div>
-            <div class="gallery" id="details-gallery">
-                <!-- As imagens serão carregadas via JavaScript -->
-            </div>
-        </section>
-
-        <section id="location" class="section">
-            <div class="section-header">
-                <h2 data-pt="Localização" data-en="Location">Localização</h2>
-            </div>
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96283.06404172393!2d-7.9699397!3d40.6574713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd23359c61126d07%3A0x400ebbde49036d0!2sViseu!5e0!3m2!1spt-PT!2spt!4v1650000000000!5m2!1spt-PT!2spt" 
-                    width="100%" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-                <div class="location-info">
-                    <h3 data-pt="Viseu District" data-en="Viseu District">Viseu District</h3>
-                    <p data-pt="Portugal" data-en="Portugal">Portugal</p>
-                </div>
-            </div>
-        </section>
+      <section class="gallery">
+        <img src="Images/DSCF2286.jpg" alt="Photo 1" />
+        <img src="Images/DSCF2294.jpg" alt="Photo 2" />
+        <img src="Images/DSCF2299.jpg" alt="Photo 3" />
+        <img src="Images/DSCF2303.jpg" alt="Photo 4" />
+        <img src="Images/DSCF2306.jpg" alt="Photo 5" />
+        <img src="Images/DSCF2316.jpg" alt="Photo 6" />
+        <img src="Images/DSCF2324.jpg" alt="Photo 7" />
+        <img src="Images/DSCF2341.jpg" alt="Photo 8" />
+        <img src="Images/DSCF2357.jpg" alt="Photo 9" />
+        <img src="Images/DSCF2374.jpg" alt="Photo 10" />
+      </section>
     </main>
-
     <footer>
-        <p data-pt="© 2025 MF Photography" data-en="© 2025 MF Photography">© 2025 MF Photography</p>
+      <p>&copy; 2024 Light and Moments</p>
     </footer>
-</body>
+  </body>
 </html>
