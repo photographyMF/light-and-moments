@@ -4,7 +4,7 @@
 // Dados das imagens para cada categoria
 const galleryData = {
   landscapes: [
-    { src: 'imagens/landscapes/1.jpg', alt: 'Cidade ao pôr do sol', title_pt: 'Cidade ao Pôr do Sol', title_en: 'City at Sunset' },
+    { src: 'imagens/landscapes/landscape1.jpg', alt: 'Cidade ao pôr do sol', title_pt: 'Cidade ao Pôr do Sol', title_en: 'City at Sunset' },
     { src: 'imagens/landscapes/landscape2.jpg', alt: 'Vista da cidade em preto e branco', title_pt: 'Vista da Cidade', title_en: 'City View' },
     { src: 'imagens/landscapes/landscape3.jpg', alt: 'Cachoeira na floresta', title_pt: 'Cachoeira na Floresta', title_en: 'Forest Waterfall' },
     { src: 'imagens/landscapes/landscape4.jpg', alt: 'Miradouro com vista para montanhas', title_pt: 'Miradouro', title_en: 'Viewpoint' },
