@@ -50,6 +50,10 @@ let currentLanguage = 'pt';
 // Função para mudar o idioma do site
 function changeLanguage() {
   const languageSelect = document.getElementById('language-select');
+  if (!languageSelect) {
+    console.error('Elemento language-select não encontrado.');
+    return;
+  }
   currentLanguage = languageSelect.value;
   
   // Atualiza todos os elementos com atributos data-pt e data-en
@@ -78,43 +82,40 @@ function updateGalleryTitles() {
 
 // Função para carregar as imagens nas galerias
 function loadGalleryImages() {
-  // Carrega imagens de paisagens
+  console.log('Iniciando carregamento das galerias...');
+  
   const landscapesGallery = document.getElementById('landscapes-gallery');
-  if (landscapesGallery) {
-    galleryData.landscapes.forEach(image => {
-      createGalleryItem(landscapesGallery, image, 'landscape-theme');
-    });
-  }
-  
-  // Carrega imagens macro
   const macroGallery = document.getElementById('macro-gallery');
-  if (macroGallery) {
-    galleryData.macro.forEach(image => {
-      createGalleryItem(macroGallery, image, 'macro-theme');
-    });
+  const detailsGallery = document.getElementById('details-gallery');
+  
+  if (!landscapesGallery || !macroGallery || !detailsGallery) {
+    console.error('Um ou mais elementos da galeria não foram encontrados.');
+    return;
   }
   
-  // Carrega imagens de detalhes
-  const detailsGallery = document.getElementById('details-gallery');
-  if (detailsGallery) {
-    galleryData.details.forEach(image => {
-      createGalleryItem(detailsGallery, image, 'details-theme');
-    });
-  }
+  galleryData.landscapes.forEach(image => {
+    createGalleryItem(landscapesGallery, image, 'landscape-theme');
+  });
+  galleryData.macro.forEach(image => {
+    createGalleryItem(macroGallery, image, 'macro-theme');
+  });
+  galleryData.details.forEach(image => {
+    createGalleryItem(detailsGallery, image, 'details-theme');
+  });
 }
 
 // Função para criar um item de galeria
 function createGalleryItem(gallery, imageData, themeClass) {
+  console.log(`Adicionando imagem: ${imageData.src}`);
   const item = document.createElement('div');
   item.className = `gallery-item ${themeClass} fade-in`;
   
-  // Cria a imagem com lazy loading
   const img = document.createElement('img');
   img.src = imageData.src;
   img.alt = imageData.alt;
   img.loading = 'lazy';
+  img.onerror = () => console.error(`Erro ao carregar imagem: ${imageData.src}`);
   
-  // Cria a sobreposição com o título
   const overlay = document.createElement('div');
   overlay.className = 'overlay';
   
@@ -124,36 +125,28 @@ function createGalleryItem(gallery, imageData, themeClass) {
   title.textContent = currentLanguage === 'pt' ? imageData.title_pt : imageData.title_en;
   
   overlay.appendChild(title);
-  
-  // Adiciona os elementos ao item da galeria
   item.appendChild(img);
   item.appendChild(overlay);
-  
-  // Adiciona o item à galeria
   gallery.appendChild(item);
   
-  // Adiciona evento de clique para abrir a imagem em tamanho maior
   item.addEventListener('click', () => {
+    console.log('Clicado em:', imageData.src);
     openLightbox(imageData);
   });
 }
 
 // Função para criar e abrir o lightbox
 function openLightbox(imageData) {
-  // Cria o container do lightbox
   const lightbox = document.createElement('div');
   lightbox.className = 'lightbox';
   
-  // Cria o conteúdo do lightbox
   const content = document.createElement('div');
   content.className = 'lightbox-content';
   
-  // Cria a imagem
   const img = document.createElement('img');
   img.src = imageData.src;
   img.alt = imageData.alt;
   
-  // Cria o botão de fechar
   const closeBtn = document.createElement('span');
   closeBtn.className = 'lightbox-close';
   closeBtn.innerHTML = '&times;';
@@ -162,22 +155,18 @@ function openLightbox(imageData) {
     document.body.style.overflow = 'auto';
   });
   
-  // Cria a legenda
   const caption = document.createElement('div');
   caption.className = 'lightbox-caption';
   caption.textContent = currentLanguage === 'pt' ? imageData.title_pt : imageData.title_en;
   
-  // Adiciona os elementos ao lightbox
   content.appendChild(img);
   content.appendChild(closeBtn);
   content.appendChild(caption);
   lightbox.appendChild(content);
   
-  // Adiciona o lightbox ao body
   document.body.appendChild(lightbox);
   document.body.style.overflow = 'hidden';
   
-  // Fecha o lightbox ao clicar fora da imagem
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
       document.body.removeChild(lightbox);
@@ -193,7 +182,6 @@ function createBackToTopButton() {
   backToTopBtn.innerHTML = '&#8679;';
   document.body.appendChild(backToTopBtn);
   
-  // Mostra ou esconde o botão baseado na posição de rolagem
   window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
       backToTopBtn.classList.add('visible');
@@ -202,7 +190,6 @@ function createBackToTopButton() {
     }
   });
   
-  // Adiciona evento de clique para rolar para o topo
   backToTopBtn.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
@@ -227,29 +214,6 @@ function addScrollAnimations() {
   sections.forEach(section => {
     observer.observe(section);
   });
-}
-
-// Função para inicializar o site
-function initSite() {
-  // Verifica se há uma preferência de idioma salva
-  const savedLanguage = localStorage.getItem('preferredLanguage');
-  if (savedLanguage) {
-    currentLanguage = savedLanguage;
-    document.getElementById('language-select').value = savedLanguage;
-    changeLanguage();
-  }
-  
-  // Carrega as imagens nas galerias
-  loadGalleryImages();
-  
-  // Cria o botão de voltar ao topo
-  createBackToTopButton();
-  
-  // Adiciona animações de entrada
-  addScrollAnimations();
-  
-  // Adiciona estilos para o lightbox dinamicamente
-  addLightboxStyles();
 }
 
 // Função para adicionar estilos do lightbox
@@ -299,6 +263,36 @@ function addLightboxStyles() {
     }
   `;
   document.head.appendChild(style);
+}
+
+// Função para inicializar o site
+function initSite() {
+  console.log('Inicializando o site...');
+  
+  // Verifica se há uma preferência de idioma salva
+  const savedLanguage = localStorage.getItem('preferredLanguage');
+  if (savedLanguage) {
+    currentLanguage = savedLanguage;
+    const languageSelect = document.getElementById('language-select');
+    if (languageSelect) {
+      languageSelect.value = savedLanguage;
+      changeLanguage();
+    } else {
+      console.error('Elemento language-select não encontrado durante a inicialização.');
+    }
+  }
+  
+  // Carrega as imagens nas galerias
+  loadGalleryImages();
+  
+  // Cria o botão de voltar ao topo
+  createBackToTopButton();
+  
+  // Adiciona animações de entrada
+  addScrollAnimations();
+  
+  // Adiciona estilos para o lightbox dinamicamente
+  addLightboxStyles();
 }
 
 // Inicializa o site quando o DOM estiver carregado
