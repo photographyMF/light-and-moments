@@ -1,121 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light and Moments - MF Photography</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="color-scheme.css">
-    <script src="script.js" defer></script>
-    <style>
-        .map-container {
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow-medium);
-            height: 450px;
-            background-color: #f5f5f5;
-        }
-        
-        .static-map {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .location-info {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 1rem;
-            border-radius: 5px;
-            max-width: 200px;
-            z-index: 10;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="language-selector">
-            <label for="language-select">Idioma / Language:</label>
-            <select id="language-select" onchange="changeLanguage()">
-                <option value="pt" selected>Português</option>
-                <option value="en">English</option>
-            </select>
+<section id="landscapes" class="section">
+    <div class="section-header">
+        <h2 data-pt="Paisagens" data-en="Landscapes">Paisagens</h2>
+    </div>
+    <div class="gallery" id="landscapes-gallery">
+        <div class="gallery-item landscape-theme fade-in">
+            <img src="images/landscapes/landscape1.jpg" alt="Imagem de teste" loading="lazy">
+            <div class="overlay">
+                <h3 data-pt="Imagem de Teste" data-en="Test Image">Imagem de Teste</h3>
+            </div>
         </div>
-        <div class="header-content">
-            <h1 class="site-title" data-pt="Light and Moments" data-en="Light and Moments">Light and Moments</h1>
-            <p class="site-subtitle" data-pt="Portefólio de fotografia por MF" data-en="Photography portfolio by MF">Portefólio de fotografia por MF</p>
-        </div>
-    </header>
-
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#about" class="nav-link" data-pt="Sobre Mim" data-en="About Me">Sobre Mim</a></li>
-            <li><a href="#landscapes" class="nav-link" data-pt="Paisagens" data-en="Landscapes">Paisagens</a></li>
-            <li><a href="#macro" class="nav-link" data-pt="Macro" data-en="Macro">Macro</a></li>
-            <li><a href="#details" class="nav-link" data-pt="Detalhes" data-en="Details">Detalhes</a></li>
-            <li><a href="#location" class="nav-link" data-pt="Localização" data-en="Location">Localização</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="about" class="section">
-            <div class="section-header">
-                <h2 data-pt="Sobre Mim" data-en="About Me">Sobre Mim</h2>
-            </div>
-            <div class="section-content">
-                <p data-pt="Sou um fotógrafo amador apaixonado pela beleza da natureza, dos pequenos detalhes e dos contrastes noturnos. Através da lente da minha câmara, procuro capturar momentos únicos que transmitam emoção, luz e autenticidade." 
-                   data-en="I am an amateur photographer passionate about the beauty of nature, small details, and night contrasts. Through my camera lens, I seek to capture unique moments that convey emotion, light, and authenticity.">
-                    Sou um fotógrafo amador apaixonado pela beleza da natureza, dos pequenos detalhes e dos contrastes noturnos. Através da lente da minha câmara, procuro capturar momentos únicos que transmitam emoção, luz e autenticidade.
-                </p>
-            </div>
-        </section>
-
-        <section id="landscapes" class="section">
-            <div class="section-header">
-                <h2 data-pt="Paisagens" data-en="Landscapes">Paisagens</h2>
-            </div>
-            <div class="gallery" id="landscapes-gallery">
-                <!-- As imagens serão carregadas via JavaScript -->
-            </div>
-        </section>
-
-        <section id="macro" class="section">
-            <div class="section-header">
-                <h2 data-pt="Macro" data-en="Macro">Macro</h2>
-            </div>
-            <div class="gallery" id="macro-gallery">
-                <!-- As imagens serão carregadas via JavaScript -->
-            </div>
-        </section>
-
-        <section id="details" class="section">
-            <div class="section-header">
-                <h2 data-pt="Detalhes" data-en="Details">Detalhes</h2>
-            </div>
-            <div class="gallery" id="details-gallery">
-                <!-- As imagens serão carregadas via JavaScript -->
-            </div>
-        </section>
-
-        <section id="location" class="section">
-            <div class="section-header">
-                <h2 data-pt="Localização" data-en="Location">Localização</h2>
-            </div>
-            <div class="map-container">
-                <img src="https://maps.googleapis.com/maps/api/staticmap?center=Viseu,Portugal&zoom=13&size=1200x450&maptype=roadmap&markers=color:red%7CViseu,Portugal&key=AIzaSyBNLrJhOMz6idD05pzfn5lhA-TAw-mAZCU" alt="Mapa de Viseu, Portugal" class="static-map">
-                <div class="location-info">
-                    <h3 data-pt="Viseu" data-en="Viseu">Viseu</h3>
-                    <p data-pt="Portugal" data-en="Portugal">Portugal</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p data-pt="© 2025 MF Photography" data-en="© 2025 MF Photography">© 2025 MF Photography</p>
-    </footer>
-</body>
-</html>
+    </div>
+</section>
