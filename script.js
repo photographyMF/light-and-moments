@@ -4,43 +4,43 @@
 // Dados das imagens para cada categoria
 const galleryData = {
   landscapes: [
-    { src: 'imagens/landscapes/landscape1.jpg', alt: 'Cidade ao pôr do sol', title_pt: 'Cidade ao Pôr do Sol', title_en: 'City at Sunset' },
-    { src: 'imagens/landscapes/landscape2.jpg', alt: 'Vista da cidade em preto e branco', title_pt: 'Vista da Cidade', title_en: 'City View' },
-    { src: 'imagens/landscapes/landscape3.jpg', alt: 'Cachoeira na floresta', title_pt: 'Cachoeira na Floresta', title_en: 'Forest Waterfall' },
-    { src: 'imagens/landscapes/landscape4.jpg', alt: 'Miradouro com vista para montanhas', title_pt: 'Miradouro', title_en: 'Viewpoint' },
-    { src: 'imagens/landscapes/landscape5.jpg', alt: 'Vista aérea de cidade', title_pt: 'Vista Aérea', title_en: 'Aerial View' },
-    { src: 'imagens/landscapes/landscape6.jpg', alt: 'Árvore solitária junto ao mar', title_pt: 'Árvore Solitária', title_en: 'Solitary Tree' },
-    { src: 'imagens/landscapes/landscape7.jpg', alt: 'Campos verdes', title_pt: 'Campos Verdes', title_en: 'Green Fields' },
-    { src: 'imagens/landscapes/landscape8.jpg', alt: 'Cidade ao pôr do sol', title_pt: 'Cidade ao Entardecer', title_en: 'City at Dusk' },
-    { src: 'imagens/landscapes/landscape9.jpg', alt: 'Pessoa observando a paisagem', title_pt: 'Contemplação', title_en: 'Contemplation' },
-    { src: 'imagens/landscapes/landscape10.jpg', alt: 'Pôr do sol no campo', title_pt: 'Pôr do Sol no Campo', title_en: 'Sunset in the Field' },
-    { src: 'imagens/landscapes/landscape11.jpg', alt: 'Cidade vista do alto', title_pt: 'Cidade Vista do Alto', title_en: 'City from Above' },
-    { src: 'imagens/landscapes/landscape12.jpg', alt: 'Cruz ao pôr do sol', title_pt: 'Cruz ao Pôr do Sol', title_en: 'Cross at Sunset' },
-    { src: 'imagens/landscapes/landscape13.jpg', alt: 'Caminho na floresta', title_pt: 'Caminho na Floresta', title_en: 'Forest Path' },
-    { src: 'imagens/landscapes/landscape14.jpg', alt: 'Vista panorâmica da cidade', title_pt: 'Vista Panorâmica', title_en: 'Panoramic View' }
+    { src: 'images/landscapes/landscape1.jpg', alt: 'Cidade ao pôr do sol', title_pt: 'Cidade ao Pôr do Sol', title_en: 'City at Sunset' },
+    { src: 'images/landscapes/landscape2.jpg', alt: 'Vista da cidade em preto e branco', title_pt: 'Vista da Cidade', title_en: 'City View' },
+    { src: 'images/landscapes/landscape3.jpg', alt: 'Cachoeira na floresta', title_pt: 'Cachoeira na Floresta', title_en: 'Forest Waterfall' },
+    { src: 'images/landscapes/landscape4.jpg', alt: 'Miradouro com vista para montanhas', title_pt: 'Miradouro', title_en: 'Viewpoint' },
+    { src: 'images/landscapes/landscape5.jpg', alt: 'Vista aérea de cidade', title_pt: 'Vista Aérea', title_en: 'Aerial View' },
+    { src: 'images/landscapes/landscape6.jpg', alt: 'Árvore solitária junto ao mar', title_pt: 'Árvore Solitária', title_en: 'Solitary Tree' },
+    { src: 'images/landscapes/landscape7.jpg', alt: 'Campos verdes', title_pt: 'Campos Verdes', title_en: 'Green Fields' },
+    { src: 'images/landscapes/landscape8.jpg', alt: 'Cidade ao pôr do sol', title_pt: 'Cidade ao Entardecer', title_en: 'City at Dusk' },
+    { src: 'images/landscapes/landscape9.jpg', alt: 'Pessoa observando a paisagem', title_pt: 'Contemplação', title_en: 'Contemplation' },
+    { src: 'images/landscapes/landscape10.jpg', alt: 'Pôr do sol no campo', title_pt: 'Pôr do Sol no Campo', title_en: 'Sunset in the Field' },
+    { src: 'images/landscapes/landscape11.jpg', alt: 'Cidade vista do alto', title_pt: 'Cidade Vista do Alto', title_en: 'City from Above' },
+    { src: 'images/landscapes/landscape12.jpg', alt: 'Cruz ao pôr do sol', title_pt: 'Cruz ao Pôr do Sol', title_en: 'Cross at Sunset' },
+    { src: 'images/landscapes/landscape13.jpg', alt: 'Caminho na floresta', title_pt: 'Caminho na Floresta', title_en: 'Forest Path' },
+    { src: 'images/landscapes/landscape14.jpg', alt: 'Vista panorâmica da cidade', title_pt: 'Vista Panorâmica', title_en: 'Panoramic View' }
   ],
   macro: [
-    { src: 'imagens/macro/macro1.jpg', alt: 'Cristais de gelo', title_pt: 'Cristais de Gelo', title_en: 'Ice Crystals' },
-    { src: 'imagens/macro/macro2.jpg', alt: 'Flor branca', title_pt: 'Flor Branca', title_en: 'White Flower' },
-    { src: 'imagens/macro/macro3.jpg', alt: 'Pequena flor rosa', title_pt: 'Pequena Flor Rosa', title_en: 'Small Pink Flower' },
-    { src: 'imagens/macro/macro4.jpg', alt: 'Planta com gotas de orvalho', title_pt: 'Gotas de Orvalho', title_en: 'Dew Drops' },
-    { src: 'imagens/macro/macro5.jpg', alt: 'Detalhe de porta ornamentada', title_pt: 'Detalhe Ornamentado', title_en: 'Ornate Detail' },
-    { src: 'imagens/macro/macro6.jpg', alt: 'Cogumelos', title_pt: 'Cogumelos', title_en: 'Mushrooms' },
-    { src: 'imagens/macro/macro7.jpg', alt: 'Cogumelo laranja', title_pt: 'Cogumelo Laranja', title_en: 'Orange Mushroom' },
-    { src: 'imagens/macro/macro8.jpg', alt: 'Grupo de cogumelos', title_pt: 'Grupo de Cogumelos', title_en: 'Mushroom Group' },
-    { src: 'imagens/macro/macro9.jpg', alt: 'Pequenos cogumelos', title_pt: 'Pequenos Cogumelos', title_en: 'Small Mushrooms' }
+    { src: 'images/macro/macro1.jpg', alt: 'Cristais de gelo', title_pt: 'Cristais de Gelo', title_en: 'Ice Crystals' },
+    { src: 'images/macro/macro2.jpg', alt: 'Flor branca', title_pt: 'Flor Branca', title_en: 'White Flower' },
+    { src: 'images/macro/macro3.jpg', alt: 'Pequena flor rosa', title_pt: 'Pequena Flor Rosa', title_en: 'Small Pink Flower' },
+    { src: 'images/macro/macro4.jpg', alt: 'Planta com gotas de orvalho', title_pt: 'Gotas de Orvalho', title_en: 'Dew Drops' },
+    { src: 'images/macro/macro5.jpg', alt: 'Detalhe de porta ornamentada', title_pt: 'Detalhe Ornamentado', title_en: 'Ornate Detail' },
+    { src: 'images/macro/macro6.jpg', alt: 'Cogumelos', title_pt: 'Cogumelos', title_en: 'Mushrooms' },
+    { src: 'images/macro/macro7.jpg', alt: 'Cogumelo laranja', title_pt: 'Cogumelo Laranja', title_en: 'Orange Mushroom' },
+    { src: 'images/macro/macro8.jpg', alt: 'Grupo de cogumelos', title_pt: 'Grupo de Cogumelos', title_en: 'Mushroom Group' },
+    { src: 'images/macro/macro9.jpg', alt: 'Pequenos cogumelos', title_pt: 'Pequenos Cogumelos', title_en: 'Small Mushrooms' }
   ],
   details: [
-    { src: 'imagens/details/detail1.jpg', alt: 'Barco visto através de janela', title_pt: 'Barco pela Janela', title_en: 'Boat through Window' },
-    { src: 'imagens/details/detail2.jpg', alt: 'Azulejo antigo', title_pt: 'Azulejo Antigo', title_en: 'Ancient Tile' },
-    { src: 'imagens/details/detail3.jpg', alt: 'Vista através de árvores', title_pt: 'Vista através das Árvores', title_en: 'View through Trees' },
-    { src: 'imagens/details/detail4.jpg', alt: 'Escada em espiral', title_pt: 'Escada em Espiral', title_en: 'Spiral Staircase' },
-    { src: 'imagens/details/detail5.jpg', alt: 'Pedras na praia', title_pt: 'Pedras na Praia', title_en: 'Beach Stones' },
-    { src: 'imagens/details/detail6.jpg', alt: 'Porta vermelha', title_pt: 'Porta Vermelha', title_en: 'Red Door' },
-    { src: 'imagens/details/detail7.jpg', alt: 'Vista entre edifícios', title_pt: 'Entre Edifícios', title_en: 'Between Buildings' },
-    { src: 'imagens/details/detail8.jpg', alt: 'Árvore no inverno', title_pt: 'Árvore no Inverno', title_en: 'Winter Tree' },
-    { src: 'imagens/details/detail9.jpg', alt: 'Porta vermelha dupla', title_pt: 'Porta Vermelha Dupla', title_en: 'Double Red Door' },
-    { src: 'imagens/details/detail10.jpg', alt: 'Cacto verde', title_pt: 'Cacto Verde', title_en: 'Green Cactus' }
+    { src: 'images/details/detail1.jpg', alt: 'Barco visto através de janela', title_pt: 'Barco pela Janela', title_en: 'Boat through Window' },
+    { src: 'images/details/detail2.jpg', alt: 'Azulejo antigo', title_pt: 'Azulejo Antigo', title_en: 'Ancient Tile' },
+    { src: 'images/details/detail3.jpg', alt: 'Vista através de árvores', title_pt: 'Vista através das Árvores', title_en: 'View through Trees' },
+    { src: 'images/details/detail4.jpg', alt: 'Escada em espiral', title_pt: 'Escada em Espiral', title_en: 'Spiral Staircase' },
+    { src: 'images/details/detail5.jpg', alt: 'Pedras na praia', title_pt: 'Pedras na Praia', title_en: 'Beach Stones' },
+    { src: 'images/details/detail6.jpg', alt: 'Porta vermelha', title_pt: 'Porta Vermelha', title_en: 'Red Door' },
+    { src: 'images/details/detail7.jpg', alt: 'Vista entre edifícios', title_pt: 'Entre Edifícios', title_en: 'Between Buildings' },
+    { src: 'images/details/detail8.jpg', alt: 'Árvore no inverno', title_pt: 'Árvore no Inverno', title_en: 'Winter Tree' },
+    { src: 'images/details/detail9.jpg', alt: 'Porta vermelha dupla', title_pt: 'Porta Vermelha Dupla', title_en: 'Double Red Door' },
+    { src: 'images/details/detail10.jpg', alt: 'Cacto verde', title_pt: 'Cacto Verde', title_en: 'Green Cactus' }
   ]
 };
 
