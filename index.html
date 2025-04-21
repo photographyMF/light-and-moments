@@ -1,1 +1,49 @@
-
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luz e Momentos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Luz e Momentos</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>"Fotografia é a única linguagem que pode ser entendida em qualquer lugar do mundo." - Bruno Barbey</p>
+        </section>
+        <section id="galeria">
+            <h2>Galeria</h2>
+            <div class="gallery">
+                <!-- Imagens serão adicionadas aqui -->
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Luz e Momentos | Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
