@@ -365,3 +365,10 @@ footer {
   background-color: var(--forest-green-light);
   transform: translateY(-5px);
 }
+.gallery-item {
+  background-color: #f0f0f0;
+  min-height: 200px;
+}
+.gallery-item img {
+  display: block;
+}
