@@ -7,8 +7,6 @@ body {
     line-height: 1.6;
 }
 
-/* Cores e contrastes */
-
 header {
     background-color: #333;
     color: #fff;
@@ -47,11 +45,14 @@ nav a:hover {
     font-size: 3em;
 }
 
+.gallery-section {
+    padding: 20px;
+}
+
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
-    padding: 20px;
 }
 
 .gallery img {
@@ -66,8 +67,6 @@ nav a:hover {
 .gallery img:hover {
     transform: scale(1.05);
 }
-
-/* Animações e interatividade */
 
 .btn {
     background-color: #0066cc;
