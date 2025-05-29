@@ -1,9 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
 }
+
+/* Cores e contrastes */
 
 header {
     background-color: #333;
@@ -41,17 +45,13 @@ nav a:hover {
 
 .hero h1 {
     font-size: 3em;
-    margin: 0;
-}
-
-.gallery-section {
-    padding: 20px;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 15px;
+    padding: 20px;
 }
 
 .gallery img {
@@ -65,6 +65,23 @@ nav a:hover {
 
 .gallery img:hover {
     transform: scale(1.05);
+}
+
+/* Animações e interatividade */
+
+.btn {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #005bb5;
+    transform: translateY(-2px);
 }
 
 .popup {
@@ -109,7 +126,5 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
