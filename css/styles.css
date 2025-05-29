@@ -11,6 +11,7 @@ header {
     padding: 20px;
     text-align: center;
 }
+
 nav {
     display: flex;
     justify-content: center;
@@ -27,6 +28,26 @@ nav a {
 nav a:hover {
     background-color: #555;
 }
+
+.hero {
+    background: #222 url('sua-imagem-principal.jpg') center/cover no-repeat;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.gallery-section {
+    padding: 20px;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -35,7 +56,7 @@ nav a:hover {
 
 .gallery img {
     width: 100%;
-    height: 200px; /* Altere para o tamanho desejado */
+    height: 200px;
     object-fit: cover;
     transition: transform 0.3s;
     cursor: pointer;
@@ -45,6 +66,7 @@ nav a:hover {
 .gallery img:hover {
     transform: scale(1.05);
 }
+
 .popup {
     display: none;
     position: fixed;
@@ -81,6 +103,7 @@ nav a:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
 footer {
     background-color: #333;
     color: #fff;
