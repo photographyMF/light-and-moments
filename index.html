@@ -4,85 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Light and Moments - Fotografia</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-        }
-        nav a {
-            color: #fff;
-            padding: 15px 20px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        .language-selector {
-            margin: 10px;
-            text-align: center;
-        }
-        .hero {
-            background-image: url('sua-imagem-principal.jpg');
-            height: 50vh;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            flex-direction: column;
-        }
-        .hero h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin: 10px 0 0 0;
-        }
-        .gallery-section {
-            padding: 20px;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s;
-            cursor: pointer;
-            border-radius: 8px;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
     <script>
         function changeLanguage(language) {
             var elements = document.querySelectorAll("[data-lang]");
@@ -93,6 +15,17 @@
                     element.style.display = "none";
                 }
             });
+        }
+
+        function openPopup(src) {
+            var popup = document.getElementById("popup");
+            var img = document.getElementById("popup-img");
+            popup.style.display = "block";
+            img.src = src;
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
         }
     </script>
 </head>
@@ -131,60 +64,65 @@
         <h2 data-lang="pt">Paisagens</h2>
         <h2 data-lang="en" style="display: none;">Landscapes</h2>
         <section class="gallery">
-    <img src="imagens/Paisagens/1.jpg" alt="1">
-    <img src="imagens/Paisagens/2.jpg" alt="2">
-    <img src="imagens/Paisagens/3.jpg" alt="3">
-    <img src="imagens/Paisagens/4.jpg" alt="4">
-    <img src="imagens/Paisagens/5.jpg" alt="5">        
-    <img src="imagens/Paisagens/6.jpg" alt="6">
-    <img src="imagens/Paisagens/7.jpg" alt="7">
-    <img src="imagens/Paisagens/8.jpg" alt="8">
-    <img src="imagens/Paisagens/9.jpg" alt="9">
-    <img src="imagens/Paisagens/10.jpg" alt="10">
-    <img src="imagens/Paisagens/11.jpg" alt="11">
-    <img src="imagens/Paisagens/12.jpg" alt="12">
-    <img src="imagens/Paisagens/13.jpg" alt="13">
-    <img src="imagens/Paisagens/14.jpg" alt="14">
-</section>
+            <img src="imagens/Paisagens/1.jpg" alt="1" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/2.jpg" alt="2" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/3.jpg" alt="3" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/4.jpg" alt="4" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/5.jpg" alt="5" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/6.jpg" alt="6" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/7.jpg" alt="7" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/8.jpg" alt="8" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/9.jpg" alt="9" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/10.jpg" alt="10" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/11.jpg" alt="11" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/12.jpg" alt="12" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/13.jpg" alt="13" onclick="openPopup(this.src)">
+            <img src="imagens/Paisagens/14.jpg" alt="14" onclick="openPopup(this.src)">
+        </section>
     </div>
 
     <div class="gallery-section">
         <h2 data-lang="pt">Macro</h2>
         <h2 data-lang="en" style="display: none;">Macro</h2>
         <section class="gallery">
-    <img src="imagens/Macro/15.jpg" alt="15">
-    <img src="imagens/Macro/16.jpg" alt="16">
-    <img src="imagens/Macro/17.jpg" alt="17">
-    <img src="imagens/Macro/18.jpg" alt="18">
-    <img src="imagens/Macro/19.jpg" alt="19">
-    <img src="imagens/Macro/20.jpg" alt="20">
-    <img src="imagens/Macro/21.jpg" alt="21">
-    <img src="imagens/Macro/12.jpg" alt="12">
-    <img src="imagens/Macro/23.jpg" alt="23">
-</section>
+            <img src="imagens/Macro/15.jpg" alt="15" onclick="openPopup(this.src)">
+            <img src="imagens/Macro/16.jpg" alt="16" onclick="openPopup(this.src)">
+            <img src="imagens/Macro/17.jpg" alt="17" onclick="openPopup(this.src)">
+            <img src="imagens/Macro/18.jpg" alt="18" onclick="openPopup(this.src)">
+            <img src="imagens/Macro/19.jpg" alt="19" onclick="openPopup(this.src)">
+            <img src="imagens/Macro/20.jpg" alt="20" onclick="openPopup(this.src)">
+            <img src="imagens/Macro/21.jpg" alt="21" onclick="openPopup(this.src)">
+            <img src="imagens/Macro/22.jpg" alt="22" onclick="openPopup(this.src)">
+            <img src="imagens/Macro/23.jpg" alt="23" onclick="openPopup(this.src)">
+        </section>
     </div>
 
     <div class="gallery-section">
         <h2 data-lang="pt">Detalhes</h2>
         <h2 data-lang="en" style="display: none;">Details</h2>
         <section class="gallery">
-    <img src="imagens/Detalhes/24.jpg" alt="24">
-    <img src="imagens/Detalhes/25.jpg" alt="25">
-    <img src="imagens/Detalhes/26.jpg" alt="26">
-    <img src="imagens/Detalhes/27.jpg" alt="27">
-    <img src="imagens/Detalhes/28.jpg" alt="28">
-    <img src="imagens/Detalhes/29.jpg" alt="29">
-    <img src="imagens/Detalhes/30.jpg" alt="30">
-    <img src="imagens/Detalhes/31.jpg" alt="31">
-    <img src="imagens/Detalhes/32.jpg" alt="32">
-    <img src="imagens/Detalhes/33.jpg" alt="33">
-</section>
+            <img src="imagens/Detalhes/24.jpg" alt="24" onclick="openPopup(this.src)">
+            <img src="imagens/Detalhes/25.jpg" alt="25" onclick="openPopup(this.src)">
+            <img src="imagens/Detalhes/26.jpg" alt="26" onclick="openPopup(this.src)">
+            <img src="imagens/Detalhes/27.jpg" alt="27" onclick="openPopup(this.src)">
+            <img src="imagens/Detalhes/28.jpg" alt="28" onclick="openPopup(this.src)">
+            <img src="imagens/Detalhes/29.jpg" alt="29" onclick="openPopup(this.src)">
+            <img src="imagens/Detalhes/30.jpg" alt="30" onclick="openPopup(this.src)">
+            <img src="imagens/Detalhes/31.jpg" alt="31" onclick="openPopup(this.src)">
+            <img src="imagens/Detalhes/32.jpg" alt="32" onclick="openPopup(this.src)">
+            <img src="imagens/Detalhes/33.jpg" alt="33" onclick="openPopup(this.src)">
+        </section>
     </div>
 
     <footer>
         <p data-lang="pt">&copy; 2025 Light and Moments - Todos os direitos reservados</p>
         <p data-lang="en" style="display: none;">&copy; 2025 Light and Moments - All rights reserved</p>
     </footer>
+
+    <div id="popup" class="popup" onclick="closePopup()">
+        <span class="close">&times;</span>
+        <img class="popup-content" id="popup-img">
+    </div>
 
 </body>
 </html>
