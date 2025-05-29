@@ -55,11 +55,13 @@
             font-size: 1.2em;
             margin: 10px 0 0 0;
         }
+        .gallery-section {
+            padding: 20px;
+        }
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 15px;
-            padding: 20px;
         }
         .gallery img {
             width: 100%;
@@ -105,8 +107,8 @@
         <h1 data-lang="en" style="display: none;">Light and Moments</h1>
         <p data-lang="pt">Capturando a beleza do mundo</p>
         <p data-lang="en" style="display: none;">Capturing the beauty of the world</p>
-        <p data-lang="pt">A fotografia é a única linguagem que pode ser entendida em qualquer lugar do mundo. Bruno Barbey</p>
-        <p data-lang="en" style="display: none;">Photography is the only language that can be understood anywhere in the world. Bruno Barbey</p>
+        <p data-lang="pt">A fotografia é a única linguagem que pode ser entendida em qualquer lugar do mundo.</p>
+        <p data-lang="en" style="display: none;">Photography is the only language that can be understood anywhere in the world.</p>
     </header>
 
     <nav>
@@ -125,41 +127,38 @@
         <h1 data-lang="en" style="display: none;">Welcome to my portfolio</h1>
     </div>
 
-    <section id="gallery" class="gallery">
-        <img src="foto1.jpg" alt="Foto 1">
-        <img src="foto2.jpg" alt="Foto 2">
-        <img src="foto3.jpg" alt="Foto 3">
-        <img src="foto4.jpg" alt="Foto 4">
-        <img src="foto5.jpg" alt="Foto 5">
-        <img src="foto6.jpg" alt="Foto 6">
-        <img src="foto6.jpg" alt="Foto 7">
-        <img src="foto6.jpg" alt="Foto 8">
-        <img src="foto6.jpg" alt="Foto 9">
-        <img src="foto6.jpg" alt="Foto 10">
-        <img src="foto6.jpg" alt="Foto 11">
-        <img src="foto6.jpg" alt="Foto 12">
-        <img src="foto6.jpg" alt="Foto 13">
-        <img src="foto6.jpg" alt="Foto 14">
-        <img src="foto6.jpg" alt="Foto 15">
-        <img src="foto6.jpg" alt="Foto 16">
-        <img src="foto6.jpg" alt="Foto 17">
-        <img src="foto6.jpg" alt="Foto 18">
-        <img src="foto6.jpg" alt="Foto 19">
-        <img src="foto6.jpg" alt="Foto 20">
-        <img src="foto6.jpg" alt="Foto 21">
-        <img src="foto6.jpg" alt="Foto 22">
-        <img src="foto6.jpg" alt="Foto 23">
-        <img src="foto6.jpg" alt="Foto 24">
-        <img src="foto6.jpg" alt="Foto 25">
-        <img src="foto6.jpg" alt="Foto 26">
-        <img src="foto6.jpg" alt="Foto 27">
-        <img src="foto6.jpg" alt="Foto 28">
-        <img src="foto6.jpg" alt="Foto 29">
-        <img src="foto6.jpg" alt="Foto 30">
-        <img src="foto6.jpg" alt="Foto 31">
-        <img src="foto6.jpg" alt="Foto 32">
-        <img src="foto6.jpg" alt="Foto 33">
-    </section>
+    <div class="gallery-section">
+        <h2 data-lang="pt">Paisagens</h2>
+        <h2 data-lang="en" style="display: none;">Landscapes</h2>
+        <section class="gallery">
+            <img src="paisagem1.jpg" alt="Paisagem 1">
+            <img src="paisagem2.jpg" alt="Paisagem 2">
+            <!-- Continue até paisagem14.jpg -->
+            <img src="paisagem14.jpg" alt="Paisagem 14">
+        </section>
+    </div>
+
+    <div class="gallery-section">
+        <h2 data-lang="pt">Macro</h2>
+        <h2 data-lang="en" style="display: none;">Macro</h2>
+        <section class="gallery">
+            <img src="macro15.jpg" alt="Macro 15">
+            <img src="macro16.jpg" alt="Macro 16">
+            <!-- Continue até macro23.jpg -->
+            <img src="macro23.jpg" alt="Macro 23">
+        </section>
+    </div>
+
+    <div class="gallery-section">
+        <h2 data-lang="pt">Detalhes</h2>
+        <h2 data-lang="en" style="display: none;">Details</h2>
+        <section class="gallery">
+            <img src="detalhe24.jpg" alt="Detalhes 24">
+            <img src="detalhe25.jpg" alt="Detalhes 25">
+            <!-- Continue até detalhe33.jpg -->
+            <img src="detalhe33.jpg" alt="Detalhes 33">
+        </section>
+    </div>
 
     <footer>
         <p data-lang="pt">&copy; 2025 Light and Moments - Todos os direitos reservados</p>
