@@ -134,13 +134,13 @@
         <p data-lang="en" style="display: none;">&copy; 2025 Light and Moments - All rights reserved</p>
     </footer>
 
-    <div id="popup" class="popup" onclick="closePopup()">
-        <span class="close">&times;</span>
-        <img class="popup-content" id="popup-img">
-        <div class="popup-controls">
-            <button onclick="previousImage(document.getElementById('popup-img'))">Anterior</button>
-            <button onclick="nextImage(document.getElementById('popup-img'))">Próxima</button>
-        </div>
+    <div id="popup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img class="popup-content" id="popup-img">
+    <div class="popup-controls">
+        <button onclick="previousImage()">Anterior</button>
+        <button onclick="nextImage()">Próxima</button>
     </div>
+</div>
 </body>
 </html>
