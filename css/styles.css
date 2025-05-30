@@ -7,17 +7,17 @@ body {
     line-height: 1.6;
 }
 
-header {
-    background-color: #333;
+header, footer {
+    background-color: #2f4f4f; /* Cor verde floresta */
     color: #fff;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    background-color: #444;
+    background-color: #8b4513; /* Cor ocre "terra" */
 }
 
 nav a {
@@ -28,12 +28,12 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #6a5acd; /* Uma cor ligeiramente diferente para hover */
 }
 
 .hero {
     background: #222 url('sua-imagem-principal.jpg') center/cover no-repeat;
-    height: 25vh; /* Ajuste para tornar a barra mais estreita */
+    height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +43,12 @@ nav a:hover {
 
 .hero h1 {
     font-size: 2.5em;
+}
+
+#about {
+    background-color: #333; /* Cinzento escuro */
+    color: #fff; /* Texto branco */
+    padding: 20px;
 }
 
 .gallery-section {
@@ -69,7 +75,7 @@ nav a:hover {
 }
 
 .btn {
-    background-color: #0066cc;
+    background-color: #2f4f4f; /* Verde floresta */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -79,7 +85,7 @@ nav a:hover {
 }
 
 .btn:hover {
-    background-color: #005bb5;
+    background-color: #2e8b57; /* Hover para verde floresta */
     transform: translateY(-2px);
 }
 
@@ -99,7 +105,7 @@ nav a:hover {
 .popup-content {
     margin: auto;
     display: block;
-    max-height: 80vh; /* Ajuste para garantir que a foto seja totalmente visível */
+    max-height: 80vh;
     width: auto;
     height: auto;
 }
@@ -138,12 +144,4 @@ nav a:hover {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
 }
