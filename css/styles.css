@@ -33,7 +33,7 @@ nav a:hover {
 
 .hero {
     background: #222 url('sua-imagem-principal.jpg') center/cover no-repeat;
-    height: 25vh;
+    height: 25vh; /* Ajuste para tornar a barra mais estreita */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +99,7 @@ nav a:hover {
 .popup-content {
     margin: auto;
     display: block;
-    max-height: 80vh;
+    max-height: 80vh; /* Ajuste para garantir que a foto seja totalmente visível */
     width: auto;
     height: auto;
 }
