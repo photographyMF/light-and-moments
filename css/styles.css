@@ -33,7 +33,7 @@ nav a:hover {
 
 .hero {
     background: #222 url('sua-imagem-principal.jpg') center/cover no-repeat;
-    height: 50vh;
+    height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +42,7 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .gallery-section {
@@ -99,8 +99,28 @@ nav a:hover {
 .popup-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+}
+
+.popup-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.popup-controls button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup-controls button:hover {
+    background-color: #555;
 }
 
 .close {
