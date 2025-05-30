@@ -73,13 +73,9 @@
 
     <div id="about">
         <p>Acredito que a fotografia é a única linguagem que pode ser entendida e compreendida em todo o mundo. No instante em que capturo uma imagem, deixo de lado as barreiras linguísticas e culturais, permitindo que qualquer pessoa, em qualquer lugar, sinta, interprete e se conecte com o que vejo.</p>
-
         <p>Sou um artista e fotógrafo de natureza, apaixonado por todas as suas vertentes. Cada fotografia que faço é mais do que um simples registo visual; é uma história contada através da luz, da sombra, da textura e do movimento. Procuro revelar a essência pura da natureza, capturando instantes que, muitas vezes, passam despercebidos.</p>
-
         <p>A minha missão é transformar momentos efémeros em eternidade, traduzindo a grandiosidade do mundo natural numa linguagem visual universal. Através das minhas lentes, quero despertar emoções, inspirar o respeito pela natureza e criar um vínculo entre o observador e a beleza do nosso planeta.</p>
-
         <p>Se estás aqui, é porque partilhas desta mesma admiração pela fotografia e pela natureza. Espero que cada imagem te transporte para um novo universo e que, de alguma forma, possa tocar a tua alma.</p>
-
         <p>Bem-vindo ao meu mundo visual.</p>
     </div>
 
@@ -88,7 +84,7 @@
         <h2 data-lang="en" style="display: none;">Landscapes</h2>
         <section class="gallery">
             <img src="imagens/Paisagens/1.jpg" alt="1" onclick="openPopup(this.src)">
-            <!-- Add more images as needed -->
+            <!-- Continue adicionando suas imagens conforme necessário -->
         </section>
     </div>
 
@@ -97,8 +93,8 @@
         <p data-lang="en" style="display: none;">&copy; 2025 Light and Moments - All rights reserved</p>
     </footer>
 
-    <div id="popup" class="popup">
-        <span class="close" onclick="closePopup()">&times;</span>
+    <div id="popup" class="popup" onclick="closePopup()">
+        <span class="close">&times;</span>
         <img class="popup-content" id="popup-img">
         <div class="popup-controls">
             <button onclick="previousImage(document.getElementById('popup-img'))">Anterior</button>
