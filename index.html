@@ -28,18 +28,20 @@
             document.getElementById("popup").style.display = "none";
         }
 
-        function nextImage(current) {
+        function nextImage() {
+            let currentSrc = document.getElementById('popup-img').src;
             let images = Array.from(document.querySelectorAll('.gallery img'));
-            let index = images.findIndex(img => img.src === current.src);
+            let index = images.findIndex(img => img.src === currentSrc);
             index = (index + 1) % images.length;
-            openPopup(images[index].src);
+            document.getElementById('popup-img').src = images[index].src;
         }
 
-        function previousImage(current) {
+        function previousImage() {
+            let currentSrc = document.getElementById('popup-img').src;
             let images = Array.from(document.querySelectorAll('.gallery img'));
-            let index = images.findIndex(img => img.src === current.src);
+            let index = images.findIndex(img => img.src === currentSrc);
             index = (index - 1 + images.length) % images.length;
-            openPopup(images[index].src);
+            document.getElementById('popup-img').src = images[index].src;
         }
     </script>
 </head>
@@ -135,12 +137,12 @@
     </footer>
 
     <div id="popup" class="popup">
-    <span class="close" onclick="closePopup()">&times;</span>
-    <img class="popup-content" id="popup-img">
-    <div class="popup-controls">
-        <button onclick="previousImage()">Anterior</button>
-        <button onclick="nextImage()">Próxima</button>
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img class="popup-content" id="popup-img">
+        <div class="popup-controls">
+            <button onclick="previousImage()">Anterior</button>
+            <button onclick="nextImage()">Próxima</button>
+        </div>
     </div>
-</div>
 </body>
 </html>
