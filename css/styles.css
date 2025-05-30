@@ -11,7 +11,7 @@ header, footer {
     background-color: #2f4f4f; /* Verde floresta */
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 10px; /* Reduzido de 20px para 10px */
 }
 
 nav {
@@ -31,24 +31,10 @@ nav a:hover {
     background-color: #6a5acd; /* Cor de hover */
 }
 
-.hero {
-    background: #222 url('sua-imagem-principal.jpg') center/cover no-repeat;
-    height: 25vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero h1 {
-    font-size: 2.5em;
-}
-
 #about {
     background-color: #333; /* Cinzento escuro */
-    color: #fff; /* Texto em branco */
-    padding: 20px;
+    color: #fff; /* Texto branco */
+    padding: 13px; /* Reduzido de 20px para aproximadamente 13px */
 }
 
 .gallery-section {
