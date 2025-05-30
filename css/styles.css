@@ -11,18 +11,19 @@ header, footer {
     background-color: #2f4f4f; /* Verde floresta */
     color: #fff;
     text-align: center;
-    padding: 10px; /* Reduzido de 20px para 10px */
+    padding: 5px 0; /* Ajuste para alinhar ao texto */
 }
 
 nav {
     display: flex;
     justify-content: center;
     background-color: #8b4513; /* Ocre "terra" */
+    padding: 5px 0; /* Ajuste para alinhar ao texto */
 }
 
 nav a {
     color: #fff;
-    padding: 15px 20px;
+    padding: 10px 15px;
     text-decoration: none;
     transition: background-color 0.3s;
 }
@@ -34,7 +35,7 @@ nav a:hover {
 #about {
     background-color: #333; /* Cinzento escuro */
     color: #fff; /* Texto branco */
-    padding: 13px; /* Reduzido de 20px para aproximadamente 13px */
+    padding: 10px; /* Ajuste para alinhar ao texto */
 }
 
 .gallery-section {
